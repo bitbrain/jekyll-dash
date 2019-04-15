@@ -1,6 +1,6 @@
 ![header](header.png)
 -
-A dash UI theme for Jekyll.
+A dash UI theme for Jekyll. 🌒
 
 
 [![Build Status](https://img.shields.io/travis/bitbrain/braingdx/master.svg?logo=travis&style=flat-square)](https://travis-ci.org/bitbrain/jekyll-dash)
