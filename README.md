@@ -8,6 +8,8 @@ A dash UI theme for Jekyll.
 ---
 This theme for [Jekyll](https://jekyllrb.com/) has been inspired by [dash-ui](https://atom.io/themes/dash-ui), a dark theme for [Atom](https://atom.io).
 
+![colors](colors.png)
+
 # Features
 
 This Jekyll theme features:
