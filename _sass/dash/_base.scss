@@ -13,6 +13,11 @@ body {
   flex-direction: column;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -21,6 +26,15 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
+}
+
+figure {
+  width: 100%;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color-blue;
 }
 
 /**
@@ -68,6 +82,8 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 
 /**
@@ -76,10 +92,6 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $color-pink;
   text-decoration: none;
-
-  &:visited {
-    color: lighten($color-pink, 15%);
-  }
 
   &:hover {
     color: $color-foreground;

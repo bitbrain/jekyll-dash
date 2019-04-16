@@ -23,3 +23,69 @@
     text-decoration: none;
   }
 }
+
+.wrapper {
+  text-align: justify;
+}
+
+/**
+ * Author box
+ */
+
+ .author-box {
+   margin-bottom: 1em;
+   text-align: left;
+   min-height: 72px;
+   font-style: italic;
+   & > .author-avatar {
+     float: left;
+     white-space: pre-line;
+     margin-right: 1em;
+   }
+ }
+
+.site-header {
+  margin-bottom: 1em;
+}
+
+.post {
+  .post-title {
+    color: $color-foreground;
+  }
+  .post-date {
+    margin-top: 0.5em;
+    color: $color-foreground-dark;
+  }
+}
+
+.post-links {
+  & > .post-link-wrapper {
+     margin-bottom: 1.5em;
+
+     & > .post-link {
+       font-size: $base-font-size;
+       font-size: $post-link-font-size;
+     }
+
+     & > .post-meta {
+       color: $color-foreground-dark;
+       font-size: $small-font-size;
+     }
+  }
+}
+
+.post-tags {
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+  & > .tag {
+    color: $color-green;
+    background-color: $color-background-dark;
+    padding: 0.3em 0.6em;
+    border-radius: 0.3em;
+    &:hover {
+      text-decoration: none;
+      color: lighten($color-green, 20%);
+      background-color: lighten($color-background-dark, 5%);
+    }
+  }
+}
