@@ -7,7 +7,30 @@ $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+$on-medium:        $on-palm !default;
+$on-large: $on-laptop !default;
+
 $spacing-unit: 30px !default;
+
+$color-background-dark: #1E2227;
+$color-background-darker: #15171A;
+$color-foreground: #DAE4ED;
+$color-pink: #F24784;
+$color-red: #FC4957;
+$color-orange: #EA9D53;
+$color-yellow: #FCBC28;
+$color-teal: #4BC997;
+$color-green: #50BD6A;
+$color-cyan: #4FC1E4;
+$color-blue: #637AFE;
+$color-indigo: #6775C4;
+$color-purple: #8E59D7;
 
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
