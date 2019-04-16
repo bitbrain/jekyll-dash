@@ -1,4 +1,4 @@
-![header](header.png)
+![logo](logo.png)
 -
 A dark theme for Jekyll, inspired by Dash UI for Atom. 🌒
 
