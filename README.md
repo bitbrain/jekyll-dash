@@ -13,13 +13,13 @@ This theme for [Jekyll](https://jekyllrb.com/) has been inspired by [dash-ui](ht
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "jekyll-dash"
+gem "dash"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: jekyll-dash
+theme: dash
 ```
 
 And then execute:
