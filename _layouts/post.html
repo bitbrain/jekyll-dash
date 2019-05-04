@@ -6,7 +6,7 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
   <div class="post-tags">
       {% for tag in page.tags %}
-      <a class="tag" href="/tags/{{ tag }}/">{{ tag }}</a>
+      <a class="tag" href="/tag/{{ tag }}/">{{ tag }}</a>
       {% endfor %}
   </div>
   <div class="post-date">Published on {{ page.date | date_to_string }}</div>

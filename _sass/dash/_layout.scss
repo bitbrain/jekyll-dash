@@ -4,6 +4,16 @@
 
   // Positioning context for the mobile navigation icon
   position: relative;
+
+  .blinking_cursor {
+    animation: blinker 1s none infinite;
+    font-size: $base-font-size;
+  }
+
+  .command_prompt {
+    color: $color-blue;
+    font-size: $base-font-size;
+  }
 }
 
 .site-title {
@@ -41,6 +51,8 @@
      float: left;
      white-space: pre-line;
      margin-right: 1em;
+     width: 72px;
+     height: 72px;
    }
  }
 
@@ -48,44 +60,44 @@
   margin-bottom: 1em;
 }
 
-.post {
-  .post-title {
+
+.post-title {
     color: $color-foreground;
-  }
+}
+
+.post {
   .post-date {
     margin-top: 0.5em;
     color: $color-foreground-dark;
   }
 }
 
-.post-links {
-  & > .post-link-wrapper {
-     margin-bottom: 1.5em;
+.post-link-wrapper {
+   margin-bottom: 1.5em;
+   & > .post-link {
+     font-size: $base-font-size;
+     font-size: $post-link-font-size;
+   }
 
-     & > .post-link {
-       font-size: $base-font-size;
-       font-size: $post-link-font-size;
-     }
+   & > .post-meta {
+     color: $color-foreground-dark;
+     font-size: $small-font-size;
+   }
+ }
 
-     & > .post-meta {
-       color: $color-foreground-dark;
-       font-size: $small-font-size;
-     }
+.tag {
+  color: $color-green;
+  background-color: $color-background-dark;
+  padding: 0.3em 0.6em;
+  border-radius: 0.3em;
+  &:hover {
+    text-decoration: none;
+    color: lighten($color-green, 20%);
+    background-color: lighten($color-background-dark, 5%);
   }
 }
 
 .post-tags {
   margin-top: 0.3em;
   margin-bottom: 0.5em;
-  & > .tag {
-    color: $color-green;
-    background-color: $color-background-dark;
-    padding: 0.3em 0.6em;
-    border-radius: 0.3em;
-    &:hover {
-      text-decoration: none;
-      color: lighten($color-green, 20%);
-      background-color: lighten($color-background-dark, 5%);
-    }
-  }
 }
