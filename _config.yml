@@ -32,7 +32,7 @@ dash:
       color: purple
 
 # Build settings
-theme: dash
+theme: jekyll-dash
 
 plugins:
  - jekyll-feed
