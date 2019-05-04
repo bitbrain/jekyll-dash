@@ -11,7 +11,7 @@ layout: default
   </div>
   <div class="post-date">Published on {{ page.date | date_to_string }}</div>
   {% if page.description != null %}
-  <div class="post-description">{{ page.description }}</div>
+  <div class="post-description"><span class="color-blue">> </span>{{ page.description }}</div>
   {% endif %}
   {{ content }}
 </div>
