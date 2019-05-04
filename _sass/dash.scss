@@ -34,6 +34,7 @@ $spacing-unit: 30px !default;
 
 // Import partials.
 @import
+  "dash/fonts",
   "dash/colors",
   "dash/animations",
   "dash/base",

@@ -101,3 +101,13 @@
   margin-top: 0.3em;
   margin-bottom: 0.5em;
 }
+
+.credits {
+  font-size: 10px;
+  color: lighten($color-background-dark, 5%);
+
+  & > a {
+    color: lighten($color-background-dark, 10%);
+    text-decoration: underline;
+  }
+}
