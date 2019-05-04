@@ -143,3 +143,13 @@
     background-color: darken($color-background-dark, 3%);
   }
 }
+
+.social_links {
+  float: right;
+  & > a {
+    color: darken($color-foreground, 20%);
+    display: inline-block;
+    margin-left: 0.2em;
+    font-size: $post-link-font-size * 1.25;
+  }
+}
