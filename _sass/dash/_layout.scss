@@ -111,3 +111,35 @@
     text-decoration: underline;
   }
 }
+
+.pagination {
+  font-size: $post-link-font-size;
+  margin: 2em 0;
+  & > a, & > span {
+    font-weight: normal;
+    display: inline-block;
+    min-width: 1em;
+
+    padding: 0.3em 0.6em;
+    border-radius: 0.3em;
+    text-align: center;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  & > a {
+    color: $color-green;
+    background-color: $color-background-dark;
+    &:hover {
+      color: lighten($color-green, 20%);
+      background-color: lighten($color-background-dark, 5%);
+    }
+  }
+
+  & > span {
+    color: darken($color-foreground, 20%);
+    background-color: darken($color-background-dark, 3%);
+  }
+}
