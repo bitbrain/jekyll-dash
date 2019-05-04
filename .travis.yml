@@ -1,12 +1,12 @@
-
 before_install:
-  - gem install bundler -v 2.0.1
-
+- gem install bundler -v 2.0.1
 script:
-  - bundle install
-
+- bundle install
 deploy:
   provider: rubygems
-  api_key: $RUBYGEMS_API_KEY
+  api_key:
+    secure: K+daFCc30gK1jO3YEO25H+c2iBsVGQU1yDKlBVBF78MqrFpXA7QFY4c2i4MuwEPIzwjX5UPXfa13fDU0er729IipUmlz5a8IyiLv2eVUeCuGZREuUeRLRHulwqhn60jGg2GTTr8Qdh/vX8p/OfzqSHpfm245aYGX/2JipQkTpcAC1ACKNF8MowNGltevvnRDP/NA90bkS7h+Ov3XJiJhA7aOHljammtjtGDpgezDmkw4+R9TkIb697d3pd5jNeMHGqRzWTwBlGi2cFF+rzjXlzVgD1vLz9ylV4CByZ5rw0Z5Revo1o7Au8rdSeadVOu4PdhRD2TUiFjurDtqVZt3hruTbStMPYHX8fUKOD0pxw6kRMC+0ru0gcqvnsZ5T7IO3oDM9O5I4l6Fzm8NbtyCoim+Y8EQhr78kXlbDQ/lpq3rhsrkztilS1V7dSWC1ljCPA9F82e/2cJ8+j8xQhyXyOSPRXrdx2wgbVGuGm7rP+N3fbna/m0znhit6fr39YmTvhxDlUEBVn3PBtu0Wa/pkLHgmD3aYYA+30idc5reQKq3Ol+Xc6zFXpyw8gZhv//MLOxqHfweZcCamyZG/4aZuJINTrsxmMjjVsx2DLOQexE6xbcyFW4XDZ33pr21oO/tgQB3rX23elDlDo7qJCP3iGVYLQu5kcuBlxgH7LSyrr0=
+  gem: jekyll-dash
   on:
     tags: true
+    repo: bitbrain/jekyll-dash
