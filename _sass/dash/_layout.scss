@@ -89,7 +89,7 @@
 }
 
 .post-link-wrapper {
-   margin-bottom: 1.5em;
+   margin-bottom: 1.1em;
    & > .post-link {
      font-size: $base-font-size;
      font-size: $post-link-font-size;
@@ -103,6 +103,10 @@
 
  .tag-cloud {
    margin-bottom: 2em;
+   & > a {
+     display: inline-block;
+     margin-bottom: 1em;
+   }
  }
 
 .tag, .tag-cloud > a {
