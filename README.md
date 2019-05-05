@@ -8,18 +8,20 @@ A dark theme for Jekyll, inspired by Dash UI for Atom. 🌒
 ---
 This theme for [Jekyll](https://jekyllrb.com/) has been inspired by [dash-ui](https://atom.io/themes/dash-ui), a dark theme for [Atom](https://atom.io).
 
+![design](screenshot.png)
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "dash"
+gem "jekyll-dash"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: dash
+theme: jekyll-dash
 ```
 
 And then execute:
@@ -28,7 +30,53 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install dash
+    $ gem install jekyll-dash
+
+## Configuration
+
+Add the following configuration to your site. Customise it to your needs!
+
+```yaml
+# jekyll-paginate
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# jekyll-tagging (optional)
+tag_permalink_style: pretty
+tag_page_layout: tag_page
+tag_page_dir: tag
+
+dash:
+  date_format: "%b %-d, %Y"
+
+  disqus:
+    shortname: <your-discuss-shortname>
+
+  # generate social links in footer
+  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
+  social_links:
+    - url: https://twitter.com/bitbrain_
+      icon: twitter-square
+      color: cyan
+    - url: https://bitbrain.itch.io
+      icon: itch-io
+      color: red
+    - url: https://github.com/bitbrain
+      icon: github-square
+      color: purple
+```
+
+## Additional Features
+
+**Tagging** add the `jekyll/tagging` plugin to your `_config.yml` file to enable tagging. Do not forget to also add the following to your `Gemfile`:
+```Gemfile
+gem "jekyll-tagging"
+```
+**Gravatar** if you want to display your gravatar picture, add the `liquid-md5` to your `_config.yml` file. Do not forget to also add the following to your `Gemfile`:
+```Gemfile
+gem "liquid-md5"
+```
+**
 
 ## Contributing
 
