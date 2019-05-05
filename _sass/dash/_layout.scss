@@ -101,7 +101,11 @@
    }
  }
 
-.tag {
+ .tag-cloud {
+   margin-bottom: 2em;
+ }
+
+.tag, .tag-cloud > a {
   color: $color-green;
   background-color: $color-background-dark;
   padding: 0.3em 0.6em;

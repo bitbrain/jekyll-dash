@@ -4,11 +4,13 @@ layout: default
 {% include author.html %}
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
+  {% if site.plugins contains "jekyll/tagging" %}
   <div class="post-tags">
       {% for tag in page.tags %}
       <a class="tag" href="/tag/{{ tag }}/">{{ tag }}</a>
       {% endfor %}
   </div>
+  {% endif %}
   <div class="post-date">Published on {{ page.date | date_to_string }}</div>
   {% if page.description != null %}
   <div class="post-description"><span class="color-blue">> </span>{{ page.description }}</div>

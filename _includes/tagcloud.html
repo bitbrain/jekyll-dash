@@ -1,0 +1,7 @@
+
+{% if site.plugins contains "jekyll/tagging" %}
+<h2>All tags</h2>
+<div class="tag-cloud">
+    {{ site | tag_cloud }}
+</div>
+{% endif %}
