@@ -4,8 +4,7 @@ script:
 - bundle install
 deploy:
   provider: rubygems
-  api_key:
-    secure: "WjSTRbrw15ywE/zk6ASHG5um/mb0VP4kCn+KwDVPc+2nQpGlV7Qc4ilJtobHhaX0wp2D3IeFiMd6MM5NGuVZcMq4vkSiOg8w1BzIDrTWKKvczOzg38gIz4gxnMkywupoA4b8EtFwaQZ1/GJ5UhK//RqcInVrJ+hrFSFWsTUvlCP1aAsna5rcqh5fWaxeTMVFhHkYd0wW4k/apK2dQOPw0UwJv4IXFyBAzr28JVlCD3JqQjWMzxiO0OOI7rq2hn6p8NFnkmj/sgQjI7fm6uOV0Tja/GrXOFb7J9t8Y/Ba0d18ET7A6A2gtlwhJSzlk63Gib0TgNomi/WMtTHbkAYDXFIQQYyQsygA38GYha3yXQBzGJm0oOtnSZTXARHSvvI+1SbHycc9WbrOCsTjmtlee420Qb8jej52je040YNX1JdaHeWcbT2nJFZi3kXQdwb20diazwXOYaeBzzTCiiSJgeVsPMmTeJa2eS3nBSvBHdoKT29tc3LmKmpAux09/v8P0LnOdCsMcxS8jo+4DCi0aRolCOPOomIGPjhhPdYAeaRVztVzGqEV0/KZDqH+EvIWLi/v215ThzUE/1LSnbIK8mNYtLbSHVid8K+PenZf/jnB9XbHV7lvrhpvPN63R2m13AjXjaoOvNeP3RqS7OLO3HT5/s2mxDVHo7tHAAijt0E="
+  api_key: $RUBYGEMS_API_KEY
   gem: jekyll-dash
   on:
     tags: true
