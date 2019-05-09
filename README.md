@@ -37,6 +37,9 @@ Or install it yourself as:
 Add the following configuration to your site. Customise it to your needs!
 
 ```yaml
+# required by disqus to display comments
+url: https://your-site-url
+
 # jekyll-paginate
 paginate: 5
 paginate_path: "/blog/page:num/"
