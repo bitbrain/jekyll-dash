@@ -90,6 +90,34 @@
     border-radius: 0.3em;
     width: 100%;
   }
+
+  li {
+    list-style: none;
+    margin-left: 0;
+
+    svg {
+      color: $color-green;
+      margin-right: 0.5em;
+    }
+
+    &:before {
+      content: "\f14a";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      font-weight: 900;
+
+      display: none;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin-left: 0.5em;
+  }
 }
 
 .post-link-wrapper {
