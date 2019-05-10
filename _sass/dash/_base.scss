@@ -18,6 +18,10 @@ body, html {
   padding: 0;
 }
 
+*:focus {
+    outline: none;
+}
+
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
