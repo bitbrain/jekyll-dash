@@ -147,9 +147,11 @@
 
   ol > li {
     margin-left: 1em;
+    line-height: $base-line-height * 1.35;
   }
 
   ul > li {
+    line-height: $base-line-height * 1.35;
     color: lighten($color-green, 25%);
     list-style: none;
     margin-left: 0;
@@ -157,6 +159,7 @@
     svg {
       color: $color-green;
       margin-right: 0.5em;
+      margin-bottom: -1px;
     }
 
     &:before {
@@ -182,7 +185,7 @@
 
   & > blockquote {
     margin-top: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     margin-left: 0.5em;
     font-style: italic;
     color: lighten($color-yellow, 20%);
