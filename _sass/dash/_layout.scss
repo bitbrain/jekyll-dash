@@ -7,12 +7,32 @@
 
   .blinking_cursor {
     animation: blinker 1s none infinite;
-    font-size: $base-font-size;
+    font-size: $base-font-size * 1.25;
   }
 
   .command_prompt {
     color: $color-blue;
     font-size: $base-font-size;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-bottom: -1px;
+      margin-left: 1px;
+    }
+
+    &:before {
+      content: "\f054";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      font-weight: 900;
+
+      display: none;
+      -webkit-font-smoothing: antialiased;
+    }
   }
 }
 
@@ -73,8 +93,37 @@
 
 .post-description {
   margin-top: 1em;
-  color: $color-pink;
-  font-style: italic;
+  font-size: $base-font-size * 1.15;
+  color: $color-foreground;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  animation: type 2s steps(60, end);
+
+  & > svg {
+    color: $color-blue;
+    margin-right: 0.6em;
+    margin-bottom: -1px;
+  }
+
+  &:after {
+    content: "_";
+    animation: blinker 1s none infinite;
+    font-size: 16px;
+  }
+
+  &:before {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-weight: 900;
+
+    display: none;
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 .post {
@@ -96,7 +145,12 @@
     width: 100%;
   }
 
-  li {
+  ol > li {
+    margin-left: 1em;
+  }
+
+  ul > li {
+    color: lighten($color-green, 25%);
     list-style: none;
     margin-left: 0;
 
@@ -119,7 +173,7 @@
     }
   }
 
-  ul {
+  ul, ol {
     padding: 0;
     margin-left: 0.5em;
   }
@@ -147,13 +201,14 @@
     }
 
     & > svg.svg-inline--fa {
+      color: lighten($color-yellow, 20%);
       float: left;
       width: 3em;
       height: 3em;
       margin-right: 1em;
     }
 
-    svg {
+    & > ul > li > svg {
       color: lighten($color-yellow, 20%);
     }
 
@@ -254,10 +309,10 @@
 .social_links {
   float: right;
   & > a {
-    color: darken($color-foreground, 20%);
+    color: darken($color-foreground, 10%);
     display: inline-block;
     margin-left: 0.2em;
-    font-size: $post-link-font-size * 1.25;
+    font-size: $post-link-font-size * 1.35;
   }
 }
 
