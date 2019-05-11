@@ -22,16 +22,8 @@
     }
 
     &:before {
-      content: "\f054";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      font-weight: 900;
-
-      display: none;
-      -webkit-font-smoothing: antialiased;
+      content: $icon-chevron-right;
+      @include font-awesome-icon;
     }
   }
 }
@@ -113,16 +105,8 @@
   }
 
   &:before {
-    content: "\f054";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    font-weight: 900;
-
-    display: none;
-    -webkit-font-smoothing: antialiased;
+    content: $icon-chevron-right;
+    @include font-awesome-icon;
   }
 }
 
@@ -147,32 +131,26 @@
 
   ol > li {
     margin-left: 1em;
-    line-height: $base-line-height * 1.35;
+    text-align: left;
+    margin-bottom: 0.6em;
   }
 
   ul > li {
-    line-height: $base-line-height * 1.35;
+    text-align: left;
+    margin-bottom: 0.6em;
     color: lighten($color-green, 25%);
     list-style: none;
     margin-left: 0;
 
     svg {
       color: $color-green;
-      margin-right: 0.5em;
+      margin-right: 0.65em;
       margin-bottom: -1px;
     }
 
     &:before {
-      content: "\f14a";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      font-weight: 900;
-
-      display: none;
-      -webkit-font-smoothing: antialiased;
+      content: $icon-check;
+      @include font-awesome-icon;
     }
   }
 
@@ -191,16 +169,8 @@
     color: lighten($color-yellow, 20%);
 
     &:before {
-      content: "\f10e";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      font-weight: 900;
-
-      display: none;
-      -webkit-font-smoothing: antialiased;
+      content: $icon-quote-right;
+      @include font-awesome-icon;
     }
 
     & > svg.svg-inline--fa {
@@ -218,7 +188,7 @@
     li {
       color: $color-yellow;
       &:before {
-        content: "\f068";
+        content: $icon-minus;
       }
 
       & > svg {
@@ -329,25 +299,27 @@ ul.related-posts {
     list-style: none;
     margin-left: 0;
 
+    a {
+      display: inline-block;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+    }
+    h3 {
+      display: inline-block;
+      margin: 0;
+    }
+
     & > svg.svg-inline--fa {
-      color: $color-blue;
-      margin-right: 0.5em;
-      float: left;
-      width: 25px;
-      height: 25px;
+      color: $color-green;
+      margin-right: 0.3em;
+      width: 22px;
+      height: 22px;
+      margin-bottom: -2px;
     }
 
     &:before {
-      content: "\f14b";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      font-weight: 900;
-
-      display: none;
-      -webkit-font-smoothing: antialiased;
+      content: $icon-flask;
+      @include font-awesome-icon;
     }
   }
 }
