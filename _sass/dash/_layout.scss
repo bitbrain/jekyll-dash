@@ -91,6 +91,7 @@
   overflow: hidden;
   width: 100%;
   animation: type 2s steps(60, end);
+  margin-bottom: 1em;
 
   & > svg {
     color: $color-blue;

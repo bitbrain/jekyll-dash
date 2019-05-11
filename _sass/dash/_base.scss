@@ -26,10 +26,14 @@ body, html {
  * Set `margin-bottom` to maintain vertical rhythm
  */
 h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
+blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 3;
+}
+
+p {
+  margin: 0.5em 0;
 }
 
 figure {
@@ -83,6 +87,7 @@ li {
 
 video {
   width: 100%;
+  border-radius: 0.3em;
 }
 
 /**
@@ -139,7 +144,7 @@ blockquote {
 pre,
 code {
   @include relative-font-size(0.9375);
-  border-radius: 3px;
+  border-radius: 0.3em;
   background-color: $color-background-dark;
 }
 
