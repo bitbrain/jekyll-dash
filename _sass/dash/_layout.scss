@@ -282,10 +282,12 @@
 
 .social_links {
   float: right;
+  text-align: right;
+  display: inline-block;
   & > a {
     color: darken($color-foreground, 10%);
     display: inline-block;
-    margin-left: 0.2em;
+    padding-left: 0.3em;
     font-size: $post-link-font-size * 1.35;
   }
 }
