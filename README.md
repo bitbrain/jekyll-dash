@@ -68,6 +68,16 @@ dash:
       icon: github-square
       color: purple
 ```
+## Using this theme directly on Github Pages
+
+Please keep in mind that Github Pages does only support [a limited list of Jekyll plugins](https://pages.github.com/versions). You will be able to use this theme on Github Pages but some functionality might not be available, for example displaying tags. In order to use this theme to a full extend, you have to generate the `_site` externally, for example on [TravisCI](https://travis-ci.org). 
+
+For example, you want to host your own blog on `https://<username>.github.io`. As a result, you require the following repositories:
+
+* `blog` - contains the actual Jekyll sources ([see example](https://github.com/bitbrain/blog))
+* `<username>.github.io` - contains generated webpage, pushed automatically via TravisCI ([see example](https://github.com/bitbrain/bitbrain.github.io))
+
+You are not required to do this, but keep in mind that some functionality might not be available when using the Jekyll generator on Github directly!
 
 ## Additional Features
 
