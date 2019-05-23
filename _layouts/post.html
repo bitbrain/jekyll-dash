@@ -24,6 +24,8 @@ layout: default
 </div>
 {% endif %}
 
+{% assign size = site.related_posts | size %}
+{% if size != 0 %}
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
@@ -38,4 +40,5 @@ layout: default
     {% endfor %}
   </ul>
 </div>
+{% endif %}
 {% include tagcloud.html %}
