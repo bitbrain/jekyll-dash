@@ -2,7 +2,7 @@
 layout: default
 ---
 {% include author.html %}
-<h1 class="post-title">Articles tagged with <a class="tag" href="/tag/{{ page.tag }}/">{{ page.tag }}</a></h1>
+<h1 class="post-title">articles tagged with <a class="tag" href="/tag/{{ page.tag }}/">{{ page.tag }}</a></h1>
   <div class="post-links">
   {% for post in site.posts %}
   {% for tag in post.tags %}

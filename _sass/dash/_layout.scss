@@ -231,6 +231,15 @@
     color: lighten($color-green, 20%);
     background-color: lighten($color-background-dark, 5%);
   }
+
+  & > svg {
+    margin-right: 0.4em;
+  }
+
+  &:before {
+    content: $icon-tag;
+    @include font-awesome-icon;
+  }
 }
 
 .post-tags {
@@ -250,7 +259,7 @@
 
 .pagination {
   font-size: $post-link-font-size;
-  margin: 2em 0;
+  margin: 1em 0;
   & > a, & > span {
     font-weight: normal;
     display: inline-block;
@@ -262,6 +271,10 @@
 
     &:hover {
       text-decoration: none;
+    }
+
+    svg {
+      padding-left: 0.1em;
     }
   }
 
