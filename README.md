@@ -91,15 +91,15 @@ gem "liquid-md5"
 ```
 ## FAQ
 
-> ❓ I have configured posts but no posts are showing?
+> I have configured posts but no posts are showing?
 
 **Solution:** You most probably forgot to configure [jekyll-paginate](https://jekyllrb.com/docs/pagination/) in your _config.yml! Make sure you have the correct configuration as described above!
 
-> ❓ I have configured Disqus via _config.yml but Disqus fails to load on the page? 
+> I have configured Disqus via _config.yml but Disqus fails to load on the page? 
 
 **Solution:** Make sure you configure the correct `url` within your `_config.yml`. Also make sure that your domain is trusted by Disqus. This can be configured within Disqus by adding a trusted domain.
 
-> ❓ I am using this theme but I don't see any tags?
+> I am using this theme but I don't see any tags?
 
 **Solution**: as described above you have to add the tagging plugin. Additionally, tags do not work natively by Github Pages. You have to build your site on an external CI and push the `_site` artifacts to a hosting repository.
 
