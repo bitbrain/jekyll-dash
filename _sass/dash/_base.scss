@@ -111,7 +111,9 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: $color-foreground;
+    @include themed() {
+       color: t('foreground-color');
+    }
     text-decoration: underline;
   }
 
@@ -151,7 +153,8 @@ code {
   @include relative-font-size(0.9375);
   border-radius: 0.3em;
   @include themed() {
-     background-color: t('background-color');
+     background-color: $color-background-dark;
+     color: $color-foreground;
   }
 }
 

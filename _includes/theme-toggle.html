@@ -1,5 +1,5 @@
 <div class="toggleWrapper">
-    <input type="checkbox" class="dn" id="theme-toggle" onclick="modeSwitcher()"/>
+    <input type="checkbox" class="dn" id="theme-toggle" onclick="modeSwitcher()" checked />
     <label for="theme-toggle" class="toggle">
     <span class="toggle__handler">
       <span class="crater crater--1"></span>
@@ -22,22 +22,26 @@ if (theme === "dark") {
 const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
 
 if (theme === "dark") {
+    document.getElementById('theme-toggle').checked = true;
     document.documentElement.setAttribute('data-theme', 'dark');
     document.documentElement.classList.add('theme--dark');
     document.documentElement.classList.remove('theme--light');
 	document.getElementById("theme-toggle").className = 'light';
 } else if (theme === "light") {
+    document.getElementById('theme-toggle').checked = false;
     document.documentElement.setAttribute('data-theme', 'light');
     document.documentElement.classList.add('theme--light');
     document.documentElement.classList.remove('theme--dark');
 	document.getElementById("theme-toggle").className = 'dark';
 } else if  (userPrefers === "dark") {
+    document.getElementById('theme-toggle').checked = false;
     document.documentElement.setAttribute('data-theme', 'dark');
 	document.documentElement.classList.add('theme--dark');
     document.documentElement.classList.remove('theme--light');
 	window.localStorage.setItem('theme', 'dark');
 	document.getElementById("theme-toggle").className = 'light';
 } else {
+    document.getElementById('theme-toggle').checked = true;
     document.documentElement.setAttribute('data-theme', 'light');
 	document.documentElement.classList.add('theme--light');
     document.documentElement.classList.remove('theme--dark');

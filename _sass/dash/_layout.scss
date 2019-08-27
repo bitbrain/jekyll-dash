@@ -242,7 +242,7 @@
   border-radius: 0.3em;
   &:hover {
     text-decoration: none;
-    color: lighten($color-green, 20%);
+    color: lighten($color-green, 20%) !important;
     @include themed() {
        background-color: lighten(t('background-color'), 5%);
     }

@@ -4,7 +4,7 @@ $color-foreground: #DAE4ED;
 $color-foreground-dark: lighten($color-background-dark, 30%);
 
 $color-background-light: #DAE4ED;
-$color-background-lighter: lighten($color-background-light, 30%);
+$color-background-lighter: lighten($color-background-light, 7%);
 $color-foreground-dark: #1E2227;
 $color-foreground-darker: #15171A;
 
@@ -19,24 +19,24 @@ $color-blue: #637AFE;
 $color-indigo: #6775C4;
 $color-purple: #8E59D7;
 
-.color-pink { color: $color-pink; }
-.color-red { color: $color-red; }
-.color-orange { color: $color-orange; }
-.color-yellow { color: $color-yellow; }
-.color-teal { color: $color-teal; }
-.color-green { color: $color-green; }
-.color-cyan { color: $color-cyan; }
-.color-blue { color: $color-blue; }
-.color-indigo { color: $color-indigo; }
-.color-purple { color: $color-purple; }
+.color-pink { color: $color-pink !important; }
+.color-red { color: $color-red !important; }
+.color-orange { color: $color-orange !important; }
+.color-yellow { color: $color-yellow !important; }
+.color-teal { color: $color-teal !important; }
+.color-green { color: $color-green !important; }
+.color-cyan { color: $color-cyan !important; }
+.color-blue { color: $color-blue !important; }
+.color-indigo { color: $color-indigo !important; }
+.color-purple { color: $color-purple !important; }
 
-.color-pink-hover:hover { color: $color-pink; }
-.color-red-hover:hover { color: $color-red; }
-.color-orange-hover:hover { color: $color-orange; }
-.color-yellow-hover:hover { color: $color-yellow; }
-.color-teal-hover:hover { color: $color-teal; }
-.color-green-hover:hover { color: $color-green; }
-.color-cyan-hover:hover { color: $color-cyan; }
-.color-blue-hover:hover { color: $color-blue; }
-.color-indigo-hover:hover { color: $color-indigo; }
-.color-purple-hover:hover { color: $color-purple; }
+.color-pink-hover:hover { color: $color-pink !important; }
+.color-red-hover:hover { color: $color-red !important; }
+.color-orange-hover:hover { color: $color-orange !important; }
+.color-yellow-hover:hover { color: $color-yellow !important; }
+.color-teal-hover:hover { color: $color-teal !important; }
+.color-green-hover:hover { color: $color-green !important; }
+.color-cyan-hover:hover { color: $color-cyan !important; }
+.color-blue-hover:hover { color: $color-blue !important; }
+.color-indigo-hover:hover { color: $color-indigo !important; }
+.color-purple-hover:hover { color: $color-purple !important; }
