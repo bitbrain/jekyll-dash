@@ -1,0 +1,16 @@
+$themes: (
+        dark: (
+                background-color: $color-background-dark,
+                background-color-alt: $color-background-darker,
+                foreground-color: $color-foreground,
+                foreground-color-alt: $color-foreground-dark,
+                foreground-color-contrast: white
+        ),
+        light: (
+                background-color: $color-background-lighter,
+                background-color-alt: $color-background-light,
+                foreground-color: $color-foreground-dark,
+                foreground-color-alt: $color-foreground-darker,
+                foreground-color-contrast: black
+        ),
+);

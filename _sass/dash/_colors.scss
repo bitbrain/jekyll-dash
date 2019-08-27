@@ -2,6 +2,12 @@ $color-background-dark: #1E2227;
 $color-background-darker: #15171A;
 $color-foreground: #DAE4ED;
 $color-foreground-dark: lighten($color-background-dark, 30%);
+
+$color-background-light: #DAE4ED;
+$color-background-lighter: lighten($color-background-light, 30%);
+$color-foreground-dark: #1E2227;
+$color-foreground-darker: #15171A;
+
 $color-pink: #F24784;
 $color-red: #FC4957;
 $color-orange: #EA9D53;
