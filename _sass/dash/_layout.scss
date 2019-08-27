@@ -41,7 +41,9 @@
   &,
   &:visited,
   &:hover {
-    color: $color-foreground;
+    @include themed() {
+       color: t('foreground-color');
+    }
     text-decoration: none;
   }
 }
@@ -79,14 +81,18 @@
 
 
 .post-title {
-    color: $color-foreground;
+    @include themed() {
+       color: t('foreground-color');
+    }
     text-align: left;
 }
 
 .post-description {
   margin-top: 1em;
   font-size: $base-font-size * 1.15;
-  color: $color-foreground;
+  @include themed() {
+     color: t('foreground-color');
+  }
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
@@ -115,14 +121,18 @@
   margin-bottom: 2em;
   .post-date {
     margin-top: 1em;
-    color: $color-foreground-dark;
+    @include themed() {
+       color: t('foreground-color-alt');
+    }
     font-size: 12px;
     margin-top: 1em;
     margin-left: 0.5em;
   }
 
   strong {
-    color: white;
+    @include themed() {
+       color: t('foreground-color-contrast');
+    }
   }
 
   img {
@@ -139,12 +149,16 @@
   ul > li {
     text-align: left;
     margin-bottom: 0.6em;
-    color: lighten($color-green, 25%);
+    @include themed() {
+       color: t('list-primary');
+    }
     list-style: none;
     margin-left: 0;
 
     svg {
-      color: $color-green;
+      @include themed() {
+        color: t('list-secondary');
+      }
       margin-right: 0.65em;
       margin-bottom: -1px;
     }
@@ -167,7 +181,9 @@
     margin-bottom: 1em;
     margin-left: 0.5em;
     font-style: italic;
-    color: lighten($color-yellow, 20%);
+    @include themed() {
+       color: t('quote-primary');
+    }
 
     &:before {
       content: $icon-quote-right;
@@ -175,7 +191,9 @@
     }
 
     & > svg.svg-inline--fa {
-      color: lighten($color-yellow, 20%);
+      @include themed() {
+         color: t('quote-primary');
+      }
       float: left;
       width: 3em;
       height: 3em;
@@ -183,11 +201,15 @@
     }
 
     & > ul > li > svg {
-      color: lighten($color-yellow, 20%);
+      @include themed() {
+         color: t('quote-primary');
+      }
     }
 
     li {
-      color: $color-yellow;
+      @include themed() {
+         color: t('quote-secondary');
+      }
       &:before {
         content: $icon-minus;
       }
@@ -207,7 +229,9 @@
    }
 
    & > .post-meta {
-     color: $color-foreground-dark;
+     @include themed() {
+        color: t('foreground-color-alt');
+     }
      font-size: $small-font-size;
    }
  }
@@ -223,13 +247,17 @@
 
 .tag, .tag-cloud > a {
   color: $color-green;
-  background-color: $color-background-dark;
+  @include themed() {
+     background-color: t('background-color');
+  }
   padding: 0.3em 0.6em;
   border-radius: 0.3em;
   &:hover {
     text-decoration: none;
-    color: lighten($color-green, 20%);
-    background-color: lighten($color-background-dark, 5%);
+    color: lighten($color-green, 20%) !important;
+    @include themed() {
+       background-color: lighten(t('background-color'), 5%);
+    }
   }
 
   & > svg {
@@ -249,10 +277,14 @@
 
 .credits {
   font-size: 10px;
-  color: lighten($color-background-dark, 5%);
+  @include themed() {
+     color: lighten(t('background-color'), 5%);
+  }
 
   & > a {
-    color: lighten($color-background-dark, 10%);
+    @include themed() {
+         color: lighten(t('background-color'), 10%);
+    }
     text-decoration: underline;
   }
 }
@@ -280,16 +312,22 @@
 
   & > a {
     color: $color-green;
-    background-color: $color-background-dark;
+    @include themed() {
+       background-color: t('background-color');
+    }
     &:hover {
       color: lighten($color-green, 20%);
-      background-color: lighten($color-background-dark, 5%);
+      @include themed() {
+         background-color: lighten(t('background-color'), 5%);
+      }
     }
   }
 
   & > span {
-    color: darken($color-foreground, 20%);
-    background-color: darken($color-background-dark, 3%);
+    @include themed() {
+       color: darken(t('foreground-color'), 20%);
+       background-color: darken(t('background-color'), 3%);
+    }
   }
 }
 
@@ -298,7 +336,9 @@
   text-align: right;
   display: inline-block;
   & > a {
-    color: darken($color-foreground, 10%);
+    @include themed() {
+       color: darken(t('foreground-color'), 10%);
+    }
     display: inline-block;
     padding-left: 0.3em;
     font-size: $post-link-font-size * 1.35;
@@ -338,4 +378,28 @@ ul.related-posts {
       @include font-awesome-icon;
     }
   }
+}
+
+#theme-toggle {
+    background-color: transparent;
+    border: none;
+    float: right;
+    display: inline-block;
+    &.dark {
+        &:before {
+            content: $icon-flask;
+            @include font-awesome-icon;
+        }
+         @include themed() {
+            color: t('foreground-color');
+         }
+    }
+
+    &.light {
+        &:before {
+            content: $icon-flask;
+            @include font-awesome-icon;
+        }
+        color: $color-yellow;
+    }
 }

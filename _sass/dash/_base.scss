@@ -1,7 +1,5 @@
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $color-foreground;
-  background-color: $color-background-darker;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -11,6 +9,11 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+
+  @include themed() {
+      background-color: t('background-color-alt');
+      color: t('foreground-color');
+  }
 }
 
 body, html {
@@ -108,7 +111,9 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: $color-foreground;
+    @include themed() {
+       color: t('foreground-color');
+    }
     text-decoration: underline;
   }
 
@@ -126,7 +131,9 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $color-background-dark;
+  @include themed() {
+        color: t('background-color');
+  }
   @include relative-font-size(1.125);
   letter-spacing: -1px;
   font-style: italic;
@@ -145,7 +152,10 @@ pre,
 code {
   @include relative-font-size(0.9375);
   border-radius: 0.3em;
-  background-color: $color-background-dark;
+  @include themed() {
+     background-color: $color-background-dark;
+     color: $color-foreground;
+  }
 }
 
 code {

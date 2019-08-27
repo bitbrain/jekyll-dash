@@ -1,0 +1,24 @@
+$themes: (
+        dark: (
+                background-color: $color-background-dark,
+                background-color-alt: $color-background-darker,
+                foreground-color: $color-foreground,
+                foreground-color-alt: $color-foreground-dark,
+                foreground-color-contrast: white,
+                quote-primary: lighten($color-yellow, 20%),
+                quote-secondary: $color-yellow,
+                list-primary: lighten($color-green, 25%),
+                list-secondary: $color-green
+        ),
+        light: (
+                background-color: $color-background-lighter,
+                background-color-alt: $color-background-light,
+                foreground-color: $color-foreground-dark,
+                foreground-color-alt: $color-foreground-darker,
+                foreground-color-contrast: black,
+                quote-primary: $color-yellow,
+                quote-secondary: darken($color-yellow, 10%),
+                list-primary: $color-green,
+                list-secondary: lighten($color-green, 20%)
+        ),
+);
