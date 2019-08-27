@@ -149,12 +149,16 @@
   ul > li {
     text-align: left;
     margin-bottom: 0.6em;
-    color: lighten($color-green, 25%);
+    @include themed() {
+       color: t('list-primary');
+    }
     list-style: none;
     margin-left: 0;
 
     svg {
-      color: $color-green;
+      @include themed() {
+        color: t('list-secondary');
+      }
       margin-right: 0.65em;
       margin-bottom: -1px;
     }
@@ -177,7 +181,9 @@
     margin-bottom: 1em;
     margin-left: 0.5em;
     font-style: italic;
-    color: lighten($color-yellow, 20%);
+    @include themed() {
+       color: t('quote-primary');
+    }
 
     &:before {
       content: $icon-quote-right;
@@ -185,7 +191,9 @@
     }
 
     & > svg.svg-inline--fa {
-      color: lighten($color-yellow, 20%);
+      @include themed() {
+         color: t('quote-primary');
+      }
       float: left;
       width: 3em;
       height: 3em;
@@ -193,11 +201,15 @@
     }
 
     & > ul > li > svg {
-      color: lighten($color-yellow, 20%);
+      @include themed() {
+         color: t('quote-primary');
+      }
     }
 
     li {
-      color: $color-yellow;
+      @include themed() {
+         color: t('quote-secondary');
+      }
       &:before {
         content: $icon-minus;
       }
