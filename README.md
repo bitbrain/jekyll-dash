@@ -1,7 +1,7 @@
 ![logo](logo.png)
 --
 
-A dark theme for Jekyll, inspired by Dash UI for Atom. 🌒
+A dark and light theme for Jekyll, inspired by Dash UI for Atom. 🌒☀
 
 [![Build Status](https://img.shields.io/travis/bitbrain/braingdx/master.svg?logo=travis&style=flat-square)](https://travis-ci.org/bitbrain/jekyll-dash)
 [![license](https://img.shields.io/github/license/bitbrain/jekyll-dash.svg?style=flat-square)](LICENSE.MD)
