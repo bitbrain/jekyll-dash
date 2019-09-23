@@ -16,53 +16,50 @@
 </div>
 <script type="text/javascript">
 const theme = localStorage.getItem('theme');
+if (theme === 'undefined') {
+   theme = "dark";
+}
 if (theme === "dark") {
 	document.documentElement.setAttribute('data-theme', 'dark');
+} else {
+    document.documentElement.setAttribute('data-theme', 'light');
 }
 const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
 
-if (theme === "dark") {
+function activateDarkTheme() {
     document.getElementById('theme-toggle').checked = true;
     document.documentElement.setAttribute('data-theme', 'dark');
     document.documentElement.classList.add('theme--dark');
     document.documentElement.classList.remove('theme--light');
 	document.getElementById("theme-toggle").className = 'light';
-} else if (theme === "light") {
+	window.localStorage.setItem('theme', 'dark');
+}
+
+function activateLightTheme() {
     document.getElementById('theme-toggle').checked = false;
     document.documentElement.setAttribute('data-theme', 'light');
     document.documentElement.classList.add('theme--light');
     document.documentElement.classList.remove('theme--dark');
 	document.getElementById("theme-toggle").className = 'dark';
-} else if  (userPrefers === "dark") {
-    document.getElementById('theme-toggle').checked = false;
-    document.documentElement.setAttribute('data-theme', 'dark');
-	document.documentElement.classList.add('theme--dark');
-    document.documentElement.classList.remove('theme--light');
-	window.localStorage.setItem('theme', 'dark');
-	document.getElementById("theme-toggle").className = 'light';
-} else {
-    document.getElementById('theme-toggle').checked = true;
-    document.documentElement.setAttribute('data-theme', 'light');
-	document.documentElement.classList.add('theme--light');
-    document.documentElement.classList.remove('theme--dark');
 	window.localStorage.setItem('theme', 'light');
-	document.getElementById("theme-toggle").className = 'dark';
+}
+
+if (theme === "dark") {
+    activateDarkTheme();
+} else if (theme === "light") {
+    activateLightTheme();
+} else if  (userPrefers === "light") {
+    activateDarkTheme();
+} else {
+    activateDarkTheme();
 }
 
 function modeSwitcher() {
 	let currentMode = document.documentElement.getAttribute('data-theme');
 	if (currentMode === "dark") {
-	    document.documentElement.setAttribute('data-theme', 'light');
-		document.documentElement.classList.add('theme--light');
-        document.documentElement.classList.remove('theme--dark');
-		window.localStorage.setItem('theme', 'light');
-	    document.getElementById("theme-toggle").className = 'dark';
+	    activateLightTheme();
 	} else {
-	    document.documentElement.setAttribute('data-theme', 'dark');
-		document.documentElement.classList.add('theme--dark');
-        document.documentElement.classList.remove('theme--light');
-		window.localStorage.setItem('theme', 'dark');
-	    document.getElementById("theme-toggle").className = 'light';
+	    activateDarkTheme();
 	}
 }
 </script>
