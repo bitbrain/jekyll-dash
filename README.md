@@ -53,7 +53,7 @@ dash:
   date_format: "%b %-d, %Y"
 
   disqus:
-    shortname: <your-discuss-shortname>
+    shortname: <your-disqus-shortname>
 
   # generate social links in footer
   # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
