@@ -7,6 +7,8 @@ description: > # this means to ignore newlines until "show_exerpts:"
   Google search results) and in your feed.xml site description.
 show_excerpts: false # set to true to show excerpts on the homepage
 
+url: https://cloudbat.io
+
 paginate: 1
 paginate_path: "/blog/page:num/"
 
