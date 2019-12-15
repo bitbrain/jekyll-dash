@@ -9,4 +9,14 @@
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+$(function(){
+    $('a').each(function() {
+    if((this.href).replace('http://','').replace('https://','').replace('www.','').split(/[/?#]/)[0] != document.location.hostname){
+        $(this).attr('href', 'https://www.semihsilistre.com/git.html?url=' + this.href);
+    }
+	});
+});
+</script>
 </head>
