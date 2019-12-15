@@ -8,7 +8,7 @@ before_install:
 script:
   - JEKYLL_ENV=production bundle exec jekyll build --destination site
 deploy:
-  repo: bitbrain/bitbrain.github.io
+  repo: ssilistre/myblog
   provider: pages
   local-dir: ./site
   target-branch: master
