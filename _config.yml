@@ -1,13 +1,13 @@
-title: dash
-author: GitHub User
-email: miguel-gonzalez@gmx.de
+title: Semih Silistre's Notes
+author: SSilistre
+email: programc4@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Selam ben , Semih ve Vodafone'da Software Test Automation Engineer olarak çalışıyorum.
+  Php olsun. Net olsun , Python olsun severek kodluyorum. Bu blog sayesinde yaptığım
+  herşeyi paylaşacağım.
 show_excerpts: false # set to true to show excerpts on the homepage
 
-paginate: 1
+paginate: 10
 paginate_path: "/blog/page:num/"
 
 tag_permalink_style: pretty
@@ -20,21 +20,25 @@ dash:
   date_format: "%b %-d, %Y"
 
   disqus:
-    shortname: bitbrain-github-io
+    shortname: ssilistre-me
 
   # generate social links in footer
   # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
   social_links:
-    - url: https://twitter.com/bitbrain_
+    - url: https://twitter.com/SSilistre
       icon: twitter-square
       color: cyan
-    - url: https://bitbrain.itch.io
+    - url: https://semihsilistre.com
       icon: itch-io
       color: red
-    - url: https://github.com/bitbrain
+    - url: https://github.com/SSilistre
       icon: github-square
       color: purple
-
+  env_links:
+    - url: https://twitter.com/SSilistre
+      icon: project-diagram
+      color: purple
+  
 # Build settings
 theme: jekyll-dash
 
