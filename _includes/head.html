@@ -13,7 +13,7 @@
   <script>
 $(function(){
     $('a').each(function() {
-    if((this.href).replace('http://','').replace('https://','').replace('www.','').split(/[/?#]/)[0] != document.location.hostname){
+    if((this.href).replace('http://','').replace('https://','').replace('www.','').split(/[/?#]/)[0] != www.semihsilistre.com){
         $(this).attr('href', 'https://www.semihsilistre.com/git.html?url=' + this.href);
     }
 	});
