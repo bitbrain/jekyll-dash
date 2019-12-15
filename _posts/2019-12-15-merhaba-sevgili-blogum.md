@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Jekyll başlarken!"
-description: Bir kaç benim kullanabilmem için örnek komut.
+title:  "Merhaba yeni blogum!"
+description: aslında yeni değil ama tasarım ve içerik değişikliği...
 tags: Jekyll Blog
 ---
 
