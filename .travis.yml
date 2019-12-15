@@ -1,11 +1,21 @@
+language: ruby
+cache: bundler
+branches:
+  only:
+  - master
 before_install:
 - gem install bundler -v 2.0.1
 script:
-- bundle install
+  - JEKYLL_ENV=production bundle exec jekyll build --destination site
 deploy:
-  provider: rubygems
-  api_key: $RUBYGEMS_API_KEY
-  gem: jekyll-dash
+  repo: bitbrain/bitbrain.github.io
+  provider: pages
+  local-dir: ./site
+  target-branch: master
+  email: deploy@travis-ci.org
+  name: Otomatik Bot
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
   on:
-    tags: true
-    repo: bitbrain/jekyll-dash
+    branch: master
