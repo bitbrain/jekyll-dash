@@ -2,7 +2,7 @@ language: ruby
 cache: bundler
 branches:
   only:
-  - main_blogpage
+  - master
 before_install:
 - gem install bundler -v 2.0.1
 script:
