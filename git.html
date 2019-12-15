@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
+
+<div class="container">
+ <script>
+
+var sure = 5;
+
+function geribirsaniye() {
+
+if(sure>0) {
+
+sure--;
+
+document.getElementById("kalansure").innerHTML = sure;
+}
+
+else {
+
+var url_string = window.location.href;
+var url = new URL(url_string);
+var cx = url.searchParams.get("url");
+window.location = cx;
+}
+
+}
+
+window.onload = function(e){ 
+setInterval("geribirsaniye()",1000 );
+var url_string = window.location.href;
+var url = new URL(url_string);
+var c = url.searchParams.get("url");
+document.getElementById("siteurl").innerHTML = c;
+}
+
+</script>
+
+<div id="redirect" style="font-size:20pt;box-sizing:border-box;width:100%;padding:20px;background-color:#940016;color:#fff;text-align:center;">
+<u>Şu siteye yönlendiriliyorsunuz:</u><br/>
+<b><span id="siteurl"></span></b><br/>
+Kalan Süre: <span id="kalansure">5</span><br/>
+</div>
+</div>
