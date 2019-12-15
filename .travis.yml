@@ -17,5 +17,6 @@ deploy:
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   keep-history: true
+  fqdn: www.semihsilistre.com
   on:
     branch: main_blogpage
