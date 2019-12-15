@@ -11,23 +11,17 @@ layout: default
       {% endfor %}
   </div>
   {% endif %}
-  <div class="post-date">Published on {{ page.date | date_to_string }}</div>
+  <div class="post-date">Paylaşım tarihi {{ page.date | date_to_string }}</div>
   {% if page.description != null %}
   <div class="post-description">{{ page.description }}</div>
   {% endif %}
   {{ content }}
 </div>
 
-{% if site.dash.disqus.shortname %}
-<div class="comments">
-{% include disqus.html %}
-</div>
-{% endif %}
-
 {% assign size = site.related_posts | size %}
 {% if size != 0 %}
 <div class="related">
-  <h2>related posts</h2>
+  <h2>İlgi çeken diğer yazılar</h2>
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
       <li>
@@ -39,6 +33,11 @@ layout: default
       </li>
     {% endfor %}
   </ul>
+</div>
+{% endif %}
+{% if site.dash.disqus.shortname %}
+<div class="comments">
+{% include disqus.html %}
 </div>
 {% endif %}
 {% include tagcloud.html %}
