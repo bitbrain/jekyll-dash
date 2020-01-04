@@ -18,7 +18,7 @@ layout: default
                 {% endfor %}
             </div>
             {% endif %}
-            {{ post.excerpt }}
+            {{ post.content | strip_html | truncatewords: 50 }}
             {% if site.date_format %}
               {{ post.date | date: site.date_format }}
             {% else %}
