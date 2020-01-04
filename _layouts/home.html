@@ -18,6 +18,7 @@ layout: default
                 {% endfor %}
             </div>
             {% endif %}
+            {{ post.excerpt }}
             {% if site.date_format %}
               {{ post.date | date: site.date_format }}
             {% else %}
