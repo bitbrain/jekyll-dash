@@ -3,3 +3,9 @@
 ---
 
 @import "dash";
+
+.post-excerpt {
+    @include themed() {
+        color: t('foreground-color');
+    }
+}

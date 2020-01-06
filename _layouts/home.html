@@ -23,7 +23,7 @@ layout: default
             {% else %}
               {{ post.date | date: "%b %-d, %Y" }}
             {% endif %}
-            <div>
+            <div class="post-excerpt">
               {{ post.content | strip_html | truncatewords: 50 }}
             </div>
           </div>
