@@ -18,12 +18,14 @@ layout: default
                 {% endfor %}
             </div>
             {% endif %}
-            {{ post.content | strip_html | truncatewords: 50 }}
             {% if site.date_format %}
               {{ post.date | date: site.date_format }}
             {% else %}
               {{ post.date | date: "%b %-d, %Y" }}
             {% endif %}
+            <div>
+              {{ post.content | strip_html | truncatewords: 50 }}
+            </div>
           </div>
         </div>
       {% endfor %}
