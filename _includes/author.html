@@ -1,6 +1,15 @@
 <div class="author-box">
-{% if site.plugins contains "liquid-md5" %}
-<img src="https://gravatar.com/avatar/{{ site.email | downcase | md5 }}?s=256" class="author-avatar" />
-{% endif %}
+    {% if site.avatar_source == "gravatar" and site.plugins contains "liquid-md5" %}
+        {% capture avatar_image %}
+            https://gravatar.com/avatar/{{ site.email | downcase | md5 }}?s=256
+        {% endcapture %}
+    {% elsif site.avatar_source == "github" and site.github_username %}
+        {% capture avatar_image %}
+            https://github.com/{{ site.github_username }}.png
+        {% endcapture %}
+    {% endif %}
+    {% if avatar_image %}
+        <img src="{{ avatar_image }}" class="author-avatar" />
+    {% endif %}
 {{ site.description }}
 </div>
