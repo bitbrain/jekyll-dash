@@ -226,6 +226,8 @@
    & > .post-link {
      font-size: $base-font-size;
      font-size: $post-link-font-size;
+     display: inline-block;
+     text-align: initial;
    }
 
    & > .post-meta {
