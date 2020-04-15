@@ -147,17 +147,10 @@
     list-style: none;
     margin-left: 0;
 
-    svg {
-      @include themed() {
-        color: t('list-secondary');
-      }
-      margin-right: 0.65em;
-      margin-bottom: -1px;
-    }
-
     &:before {
       content: $icon-check;
       @include font-awesome-icon;
+      margin-right: 0.5em;
     }
   }
 
@@ -177,25 +170,18 @@
        color: t('quote-primary');
     }
 
+    & > p {
+        display: block;
+        padding-left: 3em;
+    }
+
     &:before {
       content: $icon-quote-right;
       @include font-awesome-icon;
-    }
-
-    & > svg.svg-inline--fa {
-      @include themed() {
-         color: t('quote-primary');
-      }
+      margin-right: -2em;
       float: left;
-      width: 3em;
-      height: 3em;
-      margin-right: 1em;
-    }
 
-    & > ul > li > svg {
-      @include themed() {
-         color: t('quote-primary');
-      }
+      font-size: 2em;
     }
 
     li {
@@ -204,10 +190,6 @@
       }
       &:before {
         content: $icon-minus;
-      }
-
-      & > svg {
-        margin-left: 2em;
       }
     }
   }
@@ -252,10 +234,6 @@
     }
   }
 
-  & > svg {
-    margin-right: 0.4em;
-  }
-
   &:before {
     content: $icon-tag;
     @include font-awesome-icon;
@@ -296,10 +274,6 @@
 
     &:hover {
       text-decoration: none;
-    }
-
-    svg {
-      padding-left: 0.1em;
     }
   }
 
@@ -362,6 +336,7 @@ ul.related-posts {
       content: $icon-flask;
       @include font-awesome-icon;
       color: $color-green;
+      margin-right: 0.5em;
     }
   }
 }
