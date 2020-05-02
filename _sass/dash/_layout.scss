@@ -88,7 +88,6 @@
   @include themed() {
      color: t('foreground-color');
   }
-  white-space: nowrap;
   overflow: hidden;
   width: 100%;
   margin-bottom: 1em;
