@@ -241,9 +241,15 @@
   }
 }
 
+.tag {
+  display: inline-block;
+  margin: 0.3em 0.3em 0.3em 0;
+}
+
 .post-tags {
   margin-top: 0.3em;
   margin-bottom: 0.5em;
+  text-align: initial;
 }
 
 .credits {
