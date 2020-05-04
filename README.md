@@ -67,6 +67,8 @@ dash:
     - url: https://github.com/bitbrain
       icon: github-square
       color: purple
+      
+  show_author: true
 ```
 ## Using this theme directly on Github Pages
 
