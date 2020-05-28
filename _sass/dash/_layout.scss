@@ -13,17 +13,12 @@
   .command_prompt {
     color: $color-blue;
     font-size: $base-font-size;
-
-    svg {
-      width: 20px;
-      height: 20px;
-      margin-bottom: -1px;
-      margin-left: 1px;
-    }
+    margin-left: 0.1em;
 
     &:before {
       content: $icon-chevron-right;
       @include font-awesome-icon;
+      margin-right: 0.2em;
     }
   }
 }
@@ -98,12 +93,7 @@
   width: 100%;
   animation: type 2s steps(60, end);
   margin-bottom: 1em;
-
-  & > svg {
-    color: $color-blue;
-    margin-right: 0.6em;
-    margin-bottom: -1px;
-  }
+  margin-left: 0.5em;
 
   &:after {
     content: "_";
@@ -114,6 +104,8 @@
   &:before {
     content: $icon-chevron-right;
     @include font-awesome-icon;
+    margin-right: 0.5em;
+    color: $color-blue;
   }
 }
 
@@ -155,17 +147,10 @@
     list-style: none;
     margin-left: 0;
 
-    svg {
-      @include themed() {
-        color: t('list-secondary');
-      }
-      margin-right: 0.65em;
-      margin-bottom: -1px;
-    }
-
     &:before {
       content: $icon-check;
       @include font-awesome-icon;
+      margin-right: 0.5em;
     }
   }
 
@@ -185,25 +170,18 @@
        color: t('quote-primary');
     }
 
+    & > p {
+        display: block;
+        padding-left: 3em;
+    }
+
     &:before {
       content: $icon-quote-right;
       @include font-awesome-icon;
-    }
-
-    & > svg.svg-inline--fa {
-      @include themed() {
-         color: t('quote-primary');
-      }
+      margin-right: -2em;
       float: left;
-      width: 3em;
-      height: 3em;
-      margin-right: 1em;
-    }
 
-    & > ul > li > svg {
-      @include themed() {
-         color: t('quote-primary');
-      }
+      font-size: 2em;
     }
 
     li {
@@ -212,10 +190,6 @@
       }
       &:before {
         content: $icon-minus;
-      }
-
-      & > svg {
-        margin-left: 2em;
       }
     }
   }
@@ -226,6 +200,8 @@
    & > .post-link {
      font-size: $base-font-size;
      font-size: $post-link-font-size;
+     display: inline-block;
+     text-align: initial;
    }
 
    & > .post-meta {
@@ -241,7 +217,7 @@
    text-align: left;
    & > a {
      display: inline-block;
-     margin-bottom: 1em;
+     margin: 0.3em 0.3em 0.3em 0;
    }
  }
 
@@ -260,19 +236,22 @@
     }
   }
 
-  & > svg {
-    margin-right: 0.4em;
-  }
-
   &:before {
     content: $icon-tag;
     @include font-awesome-icon;
+    margin-right: 0.5em;
   }
+}
+
+.tag {
+  display: inline-block;
+  margin: 0.3em 0.3em 0.3em 0;
 }
 
 .post-tags {
   margin-top: 0.3em;
   margin-bottom: 0.5em;
+  text-align: initial;
 }
 
 .credits {
@@ -303,10 +282,6 @@
 
     &:hover {
       text-decoration: none;
-    }
-
-    svg {
-      padding-left: 0.1em;
     }
   }
 
@@ -365,17 +340,11 @@ ul.related-posts {
       margin: 0;
     }
 
-    & > svg.svg-inline--fa {
-      color: $color-green;
-      margin-right: 0.3em;
-      width: 22px;
-      height: 22px;
-      margin-bottom: -2px;
-    }
-
     &:before {
       content: $icon-flask;
       @include font-awesome-icon;
+      color: $color-green;
+      margin-right: 0.5em;
     }
   }
 }

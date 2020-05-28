@@ -1,9 +1,8 @@
 // Font Awesome Icons
 
-$icon-quote-right: "\f10e";
-$icon-chevron-right: "\f054";
-$icon-check: "\f00c";
-$icon-minus: "\f068";
-$icon-flask: "\f0c3";
-$icon-tag: "\f02b";
-$icon-lightbulb: "\f02b";
+$icon-quote-right: fa-content($fa-var-quote-right);
+$icon-chevron-right: fa-content($fa-var-chevron-right);
+$icon-check: fa-content($fa-var-check);
+$icon-minus: fa-content($fa-var-minus);
+$icon-flask: fa-content($fa-var-flask);
+$icon-tag: fa-content($fa-var-tag);

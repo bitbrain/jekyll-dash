@@ -35,6 +35,8 @@ dash:
       icon: github-square
       color: purple
 
+  show_author: true
+
 # Build settings
 theme: jekyll-dash
 

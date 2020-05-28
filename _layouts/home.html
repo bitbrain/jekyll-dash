@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-{% include author.html %}
+{% unless site.dash.show_author == false %}
+  {% include author.html %}
+{% endunless %}
 {% assign posts_count = paginator.posts | size %}
 {% if posts_count > 0 %}
 <h1>recent articles</h1>
