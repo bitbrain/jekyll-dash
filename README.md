@@ -69,6 +69,10 @@ dash:
       color: purple
       
   show_author: true
+
+# Replaces the default avatar provider (gravatar)
+#avatar_source: github
+#github_username: bitbrain
 ```
 ## Using this theme directly on Github Pages
 
