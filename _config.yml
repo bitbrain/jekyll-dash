@@ -47,5 +47,6 @@ plugins:
  - liquid-md5
  - jekyll/tagging
 
+# Replaces the default avatar provider (gravatar)
 #avatar_source: github
 #github_username: bitbrain
