@@ -47,5 +47,5 @@ plugins:
  - liquid-md5
  - jekyll/tagging
 
-avatar_source: github
-github_username: bitbrain
+#avatar_source: github
+#github_username: bitbrain
