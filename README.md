@@ -53,7 +53,7 @@ dash:
   date_format: "%b %-d, %Y"
 
   disqus:
-    shortname: <your-discuss-shortname>
+    shortname: <your-disqus-shortname>
 
   # generate social links in footer
   # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
@@ -67,6 +67,8 @@ dash:
     - url: https://github.com/bitbrain
       icon: github-square
       color: purple
+      
+  show_author: true
 ```
 ## Using this theme directly on Github Pages
 

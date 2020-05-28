@@ -3,7 +3,7 @@ $themes: (
                 background-color: $color-background-dark,
                 background-color-alt: $color-background-darker,
                 foreground-color: $color-foreground,
-                foreground-color-alt: $color-foreground-dark,
+                foreground-color-alt: lighten($color-foreground-dark, 10%),
                 foreground-color-contrast: white,
                 quote-primary: lighten($color-yellow, 20%),
                 quote-secondary: $color-yellow,
