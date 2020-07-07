@@ -14,8 +14,16 @@ This theme for [Jekyll](https://jekyllrb.com/) has been inspired by [dash-ui](ht
 
 Add this line to your Jekyll site's `Gemfile`:
 
+For **Jekyll 3**:
 ```ruby
-gem "jekyll-dash"
+gem 'jekyll-dash', '~> 1.0.0'
+```
+
+> Keep in mind: Github pages generation only supports Jekyll 3.8 right now.
+
+For **Jekyll 4**:
+```ruby
+gem 'jekyll-dash', '~> 2.0.0'
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
@@ -30,7 +38,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install jekyll-dash
+    $ gem install jekyll-dash -v version
 
 ## Configuration
 

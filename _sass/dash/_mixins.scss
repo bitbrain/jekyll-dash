@@ -8,6 +8,8 @@
   -webkit-font-smoothing: antialiased;
 }
 
+$theme-map: null;
+
 @mixin themed() {
   @each $theme, $map in $themes {
     .theme--#{$theme} & {
