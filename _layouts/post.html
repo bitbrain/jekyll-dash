@@ -47,3 +47,20 @@ layout: default
 </div>
 {% endif %}
 {% include tagcloud.html %}
+
+<script>
+  let i = 0;
+  const text = '{{ page.description }}';
+  const speed = 50;
+  
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById('animated-post-description').innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  document.getElementById('animated-post-description').style.display = 'initial';
+  typeWriter();
+</script>
