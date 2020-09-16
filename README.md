@@ -86,7 +86,7 @@ dash:
 ```
 ## Using this theme directly on Github Pages
 
-Please keep in mind that Github Pages does only support [a limited list of Jekyll plugins](https://help.github.com/en/articles/configuring-jekyll-plugins#default-plugins). You will be able to use this theme on Github Pages but some functionality might not be available, for example displaying tags. In order to use this theme to a full extend, you have to generate the `_site` externally, for example on [TravisCI](https://travis-ci.org). 
+Please keep in mind that Github Pages does only support [a limited list of Jekyll plugins](https://pages.github.com/versions/). You will be able to use this theme on Github Pages but some functionality might not be available, for example displaying tags. In order to use this theme to a full extend, you have to generate the `_site` externally, for example on [TravisCI](https://travis-ci.org). 
 
 For example, you want to host your own blog on `https://<username>.github.io`. As a result, you require the following repositories:
 
