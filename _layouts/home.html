@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-{% include author.html %}
+{% unless site.dash.show_author == false %}
+  {% include author.html %}
+{% endunless %}
 {% assign posts_count = paginator.posts | size %}
 {% if posts_count > 0 %}
 <h1>recent articles</h1>
@@ -22,6 +24,11 @@ layout: default
               {{ post.date | date: site.date_format }}
             {% else %}
               {{ post.date | date: "%b %-d, %Y" }}
+            {% endif %}
+            {% if site.show_excerpts == true %}
+              <div class="post-excerpt">
+                {{ post.content | strip_html | truncatewords: 50 }}
+              </div>
             {% endif %}
           </div>
         </div>

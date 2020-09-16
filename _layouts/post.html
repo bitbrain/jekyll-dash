@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-{% include author.html %}
+{% unless site.dash.show_author == false %}
+  {% include author.html %}
+{% endunless %}
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   {% if site.plugins contains "jekyll/tagging" %}
