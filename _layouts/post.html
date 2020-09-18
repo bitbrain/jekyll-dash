@@ -48,6 +48,7 @@ layout: default
 {% endif %}
 {% include tagcloud.html %}
 
+{% assign animation_speed = site.dash.animation_speed | default: 50 %}
 <script>
   let i = 0;
   const text = '{{ page.description }}';
