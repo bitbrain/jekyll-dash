@@ -52,7 +52,7 @@ layout: default
 <script>
   let i = 0;
   const text = '{{ page.description }}';
-  const speed = 50;
+  const speed = parseInt('{{ animation_speed }}');
   
   function typeWriter() {
     if (i < text.length) {
