@@ -88,10 +88,8 @@
   @include themed() {
      color: t('foreground-color');
   }
-  white-space: nowrap;
   overflow: hidden;
   width: 100%;
-  animation: type 2s steps(60, end);
   margin-bottom: 1em;
   margin-left: 0.5em;
 

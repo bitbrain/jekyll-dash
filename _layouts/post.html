@@ -15,7 +15,10 @@ layout: default
   {% endif %}
   <div class="post-date">Published on {{ page.date | date_to_string }}</div>
   {% if page.description != null %}
-  <div class="post-description">{{ page.description }}</div>
+  <noscript>
+    <div class="post-description">{{ page.description }}</div>
+  </noscript>
+  <div id="animated-post-description" class="post-description" style="display: none;"></div>
   {% endif %}
   {{ content }}
 </div>
@@ -44,3 +47,21 @@ layout: default
 </div>
 {% endif %}
 {% include tagcloud.html %}
+
+{% assign animation_speed = site.dash.animation_speed | default: 50 %}
+<script>
+  let i = 0;
+  const text = '{{ page.description }}';
+  const speed = parseInt('{{ animation_speed }}');
+  
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById('animated-post-description').innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  document.getElementById('animated-post-description').style.display = 'initial';
+  typeWriter();
+</script>
