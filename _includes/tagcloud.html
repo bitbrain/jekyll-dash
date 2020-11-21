@@ -1,8 +1,0 @@
-
-{% if site.plugins contains "jekyll/tagging" %}
-{% assign size = site | tag_cloud | size %}
-  {% if size != 0 %}
-  <h2>all tags</h2>
-  <div class="tag-cloud">{{ site | tag_cloud }}</div>
-  {% endif %}
-{% endif %}

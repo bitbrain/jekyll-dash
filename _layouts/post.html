@@ -1,67 +1,65 @@
 ---
 layout: default
 ---
+
 {% unless site.dash.show_author == false %}
   {% include author.html %}
 {% endunless %}
+		
 <div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  {% if site.plugins contains "jekyll/tagging" %}
-  <div class="post-tags">
-      {% for tag in page.tags %}
-      <a class="tag" href="/tag/{{ tag }}/">{{ tag }}</a>
-      {% endfor %}
-  </div>
-  {% endif %}
-  <div class="post-date">Published on {{ page.date | date_to_string }}</div>
-  {% if page.description != null %}
-  <noscript>
-    <div class="post-description">{{ page.description }}</div>
-  </noscript>
-  <div id="animated-post-description" class="post-description" style="display: none;"></div>
-  {% endif %}
-  {{ content }}
+	
+	<h1 class="post-title">{{ page.title }}</h1>
+	
+	<span>
+		{% for tag in page.tags %}
+			{% capture tag_name %}{{ tag }}{% endcapture %}
+			<a class="tag" href="/bottom_bar/tags.html#{{ tag_name }}" style="font-size:15px"><nobr>{{ tag_name }}</nobr></a>
+		{% endfor %}
+    </span>
+	
+	<!-- fucking plugins 
+	{% if site.plugins contains "jekyll/tagging" %}
+	<div class="post-tags">
+		{% for tag in page.tags %}
+		<a class="tag" href="/tag/{{ tag }}/">{{ tag }}</a>
+		{% endfor %}
+	</div>
+	{% endif %}
+	-->
+	
+	<div class="post-date">Published on {{ page.date | date_to_string }}</div>
+	<br />
+	{% if page.description != null %}
+		<div class="post-description">{{ page.description }}</div> 
+	{% endif %}
+	{{ content }}
+	
 </div>
 
 {% if site.dash.disqus.shortname %}
-<div class="comments">
-{% include disqus.html %}
-</div>
+	<div class="comments">
+		{% include disqus.html %}
+	</div>
 {% endif %}
 
+<br />
+
+<!--	This is relative post.
 {% assign size = site.related_posts | size %}
 {% if size != 0 %}
-<div class="related">
-  <h2>related posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ post.url }}">
-            {{ post.title }}
-          </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
+	<div class="related">
+		<h2>related posts</h2>
+		<ul class="related-posts">
+		{% for post in site.related_posts limit:3 %}
+		<li>
+		<h3>
+		<a href="{{ post.url }}"  style="margin-left:-30px; margin-right:20px; font-size:25px">
+			{{ post.title }}
+		</a>
+		</h3>
+		</li>
+		{% endfor %}
+	</ul>
 </div>
 {% endif %}
-{% include tagcloud.html %}
-
-{% assign animation_speed = site.dash.animation_speed | default: 50 %}
-<script>
-  let i = 0;
-  const text = '{{ page.description }}';
-  const speed = parseInt('{{ animation_speed }}');
-  
-  function typeWriter() {
-    if (i < text.length) {
-      document.getElementById('animated-post-description').innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-    }
-  }
-
-  document.getElementById('animated-post-description').style.display = 'initial';
-  typeWriter();
-</script>
+-->
