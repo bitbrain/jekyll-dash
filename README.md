@@ -6,16 +6,18 @@ Jekyll Dash is a Jekyll theme made by bitbrain.
 
 <img src="screenshot.png" alt="screenshot" style="zoom:50%;" />
 
+You can visit kunihiro.me for more information. 
+
 **No plugins means no third-party plugins here. There is still one or two plugins maybe, but they are allowed to use. (In fact I don't know whether those plugins are used or not, but anyway :)**
 
 The original one includes some plugins that isn't availible on GitHub Pages.  
-And using plugins seems to be difficult for amateurs.  
+And using those plugins seems to be difficult for amateurs.  
 (yes i CAN'T understand what he write about the pucking flugins)   
 So I try to make it become plugins-free (
 
-It looks totally different between mine and the original one.  
-~~I am going to write a blog (but in Chinese) later to introduce how to custom.~~  
-https://mycodingsucks.github.io/2020/08/21/diy-jekyll-dash.html
+It looks totally different between mine and the original one.
+
+My garbage article can be found here (Chinese): https://kunihiro.me/2020/08/21/diy-jekyll-dash.html
 
 ## Some documents:  
 ### How to build a jekyll blog  
