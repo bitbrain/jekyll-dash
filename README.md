@@ -1,147 +1,33 @@
-![logo](logo.png)
---
+# [Jekyll Dash](https://github.com/bitbrain/jekyll-dash) without plugins  
 
-A dark and light theme for Jekyll, inspired by Dash UI for Atom. 🌒☀
+Jekyll Dash is a Jekyll theme made by bitbrain.
 
-[![Build Status](https://img.shields.io/travis/bitbrain/braingdx/master.svg?logo=travis&style=flat-square)](https://travis-ci.org/bitbrain/jekyll-dash)
-[![license](https://img.shields.io/github/license/bitbrain/jekyll-dash.svg?style=flat-square)](LICENSE.MD)
-[![Gem](https://img.shields.io/gem/v/jekyll-dash.svg?style=flat)](http://rubygems.org/gems/jekyll-dash "View this project in Rubygems")
-[![Downloads](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-dash)](https://rubygems.org/gems/jekyll-dash "Number of Gem downloads")
----
-This theme for [Jekyll](https://jekyllrb.com/) has been inspired by [dash-ui](https://atom.io/themes/dash-ui), a dark theme for [Atom](https://atom.io).
+## Introduction  
 
-[![design](theme.gif)](http://bitbrain.github.io)
+<img src="/Users/kunihiro/Desktop/jekyll-dash/screenshot.png" alt="screenshot" style="zoom:50%;" />
 
-## Installation
+**No plugins means no third-party plugins here. There is still one or two plugins maybe, but they are allowed to use. (In fact I don't know whether those plugins are used or not, but anyway :)**
 
-Add this line to your Jekyll site's `Gemfile`:
+The original one includes some plugins that isn't availible on GitHub Pages.  
+And using plugins seems to be difficult for amateurs.  
+(yes i CAN'T understand what he write about the pucking flugins)   
+So I try to make it become plugins-free (
 
-For **Jekyll 3**:
-```ruby
-gem 'jekyll-dash', '~> 1.0.0'
-```
+It looks totally different between mine and the original one.  
+~~I am going to write a blog (but in Chinese) later to introduce how to custom.~~  
+https://mycodingsucks.github.io/2020/08/21/diy-jekyll-dash.html
 
-> Keep in mind: Github pages generation only supports Jekyll 3.8 right now.
+## Some documents:  
+### How to build a jekyll blog  
+https://mathsigit.github.io/blog_page/2017/11/07/githubpage-with-jekyll/  
+https://www.jianshu.com/p/9f198d5779e6  
+https://gems.ruby-china.com/  
 
-For **Jekyll 4**:
-```ruby
-gem 'jekyll-dash', '~> 2.0.0'
-```
+### How to use tag without plugins  
+https://soyee.me/2018/03/20/jekyll-tags/  
+https://codinfox.github.io/dev/2015/03/06/use-tags-and-categories-in-your-jekyll-based-github-pages/  
 
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: jekyll-dash
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install jekyll-dash -v version
-
-## Configuration
-
-Add the following configuration to your site. Customise it to your needs!
-
-```yaml
-# required by disqus to display comments
-url: https://your-site-url
-
-# jekyll-paginate
-paginate: 5
-paginate_path: "/blog/page:num/"
-
-# jekyll-tagging (optional)
-tag_permalink_style: pretty
-tag_page_layout: tag_page
-tag_page_dir: tag
-
-dash:
-  date_format: "%b %-d, %Y"
-
-  disqus:
-    shortname: <your-disqus-shortname>
-
-  # generate social links in footer
-  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
-  social_links:
-    - url: https://twitter.com/bitbrain_
-      icon: twitter-square
-      color: cyan
-    - url: https://bitbrain.itch.io
-      icon: itch-io
-      color: red
-    - url: https://github.com/bitbrain
-      icon: github-square
-      color: purple
-      
-  show_author: true
-
-# Replaces the default avatar provider (gravatar)
-#avatar_source: github
-#github_username: bitbrain
-```
-## Using this theme directly on Github Pages
-
-Please keep in mind that Github Pages does only support [a limited list of Jekyll plugins](https://pages.github.com/versions/). You will be able to use this theme on Github Pages but some functionality might not be available, for example displaying tags. In order to use this theme to a full extend, you have to generate the `_site` externally, for example on [TravisCI](https://travis-ci.org). 
-
-For example, you want to host your own blog on `https://<username>.github.io`. As a result, you require the following repositories:
-
-* `blog` - contains the actual Jekyll sources ([see example](https://github.com/bitbrain/blog))
-* `<username>.github.io` - contains generated webpage, pushed automatically via TravisCI ([see example](https://github.com/bitbrain/bitbrain.github.io))
-
-You are not required to do this, but keep in mind that some functionality might not be available when using the Jekyll generator on Github directly!
-
-## Additional Features
-
-**Tagging** add the `jekyll/tagging` plugin to your `_config.yml` file to enable tagging. Do not forget to also add the following to your `Gemfile`:
-```Gemfile
-gem "jekyll-tagging"
-```
-**Gravatar** if you want to display your gravatar picture, add the `liquid-md5` to your `_config.yml` file. Do not forget to also add the following to your `Gemfile`:
-```Gemfile
-gem "liquid-md5"
-```
-## FAQ
-
-> I have configured posts but no posts are showing?
-
-**Solution:** You most probably forgot to configure [jekyll-paginate](https://jekyllrb.com/docs/pagination/) in your _config.yml! Make sure you have the correct configuration as described above!
-
-> I have added the correct configuration for `jekyll-paginate` but it is now complaining about a missing `index.html` file. What do I do?
-
-**Solution** pagination only works with HTML files! Markdown is not supported there. Simply rename your `index.md` into `index.html` - that should do the trick!
-
-> I have configured Disqus via _config.yml but Disqus fails to load on the page? 
-
-**Solution:** Make sure you configure the correct `url` within your `_config.yml`. Also make sure that your domain is trusted by Disqus. This can be configured within Disqus by adding a trusted domain.
-
-> I am using this theme but I don't see any tags?
-
-**Solution**: as described above you have to add the tagging plugin. Additionally, tags do not work natively by Github Pages. You have to build your site on an external CI and push the `_site` artifacts to a hosting repository.
-
-> I am getting an error that Bundler could not find compatible versions for gem
-
-**Solution**
-
-Make sure you are using a version of this theme that is compatible with Jekyll. Version 1.x is only compatible with Jekyll 3.x while Version 2.x is only compatible with Jekyll 4.x.
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/bitbrain/jekyll-dash. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `jekyll-dash.gemspec` accordingly.
-
-## License
-
-The theme is available as open source under the terms of the [Apache License 2.0](https://opensource.org/licenses/Apache-2.0).
+### Plugins (However, third-party plugins are not availible due to GitHub) :  
+http://jekyllcn.com/docs/plugins/  
+https://github.com/pattex/jekyll-tagging  
+https://github.com/pathawks/liquid-md5
