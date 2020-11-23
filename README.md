@@ -4,7 +4,7 @@ Jekyll Dash is a Jekyll theme made by bitbrain.
 
 ## Introduction  
 
-<img src="/Users/kunihiro/Desktop/jekyll-dash/screenshot.png" alt="screenshot" style="zoom:50%;" />
+<img src="screenshot.png" alt="screenshot" style="zoom:50%;" />
 
 **No plugins means no third-party plugins here. There is still one or two plugins maybe, but they are allowed to use. (In fact I don't know whether those plugins are used or not, but anyway :)**
 
