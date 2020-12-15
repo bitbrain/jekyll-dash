@@ -2,7 +2,10 @@
 layout: default
 ---
 
-# Friends
+{% unless site.dash.show_author == false %}
+  {% include author.html %}
+{% endunless %}
 
-[bitbrain](https://github.com/bitbrain)：creator of jekyll-dash  
-[kunihiro](https://github.com/mycodingsucks)：www
+<br>
+
+# Friends
