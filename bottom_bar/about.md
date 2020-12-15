@@ -2,6 +2,10 @@
 layout: default
 ---
 
-# About Me
+{% unless site.dash.show_author == false %}
+  {% include author.html %}
+{% endunless %}
 
-Hi, there. 
+<br>
+
+# About Me
