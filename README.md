@@ -6,8 +6,10 @@ A dark and light theme for Jekyll, inspired by Dash UI for Atom. 🌒☀
 [![Build Status](https://img.shields.io/travis/bitbrain/braingdx/master.svg?logo=travis&style=flat-square)](https://travis-ci.org/bitbrain/jekyll-dash)
 [![license](https://img.shields.io/github/license/bitbrain/jekyll-dash.svg?style=flat-square)](LICENSE.MD)
 [![Gem](https://img.shields.io/gem/v/jekyll-dash.svg?style=flat)](http://rubygems.org/gems/jekyll-dash "View this project in Rubygems")
+
 [![Downloads](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-dash)](https://rubygems.org/gems/jekyll-dash "Number of Gem downloads")
 ---
+
 This theme for [Jekyll](https://jekyllrb.com/) has been inspired by [dash-ui](https://atom.io/themes/dash-ui), a dark theme for [Atom](https://atom.io).
 
 [![design](theme.gif)](http://bitbrain.github.io)
@@ -17,6 +19,7 @@ This theme for [Jekyll](https://jekyllrb.com/) has been inspired by [dash-ui](ht
 Add this line to your Jekyll site's `Gemfile`:
 
 For **Jekyll 3**:
+
 ```ruby
 gem 'jekyll-dash', '~> 1.0.0'
 ```
@@ -24,6 +27,7 @@ gem 'jekyll-dash', '~> 1.0.0'
 > Keep in mind: Github pages generation only supports Jekyll 3.8 right now.
 
 For **Jekyll 4**:
+
 ```ruby
 gem 'jekyll-dash', '~> 2.0.0'
 ```
@@ -84,6 +88,7 @@ dash:
 #avatar_source: github
 #github_username: bitbrain
 ```
+
 ## Using this theme directly on Github Pages
 
 Please keep in mind that Github Pages does only support [a limited list of Jekyll plugins](https://pages.github.com/versions/). You will be able to use this theme on Github Pages but some functionality might not be available, for example displaying tags. In order to use this theme to a full extend, you have to generate the `_site` externally, for example on [TravisCI](https://travis-ci.org). 
@@ -98,13 +103,17 @@ You are not required to do this, but keep in mind that some functionality might 
 ## Additional Features
 
 **Tagging** add the `jekyll/tagging` plugin to your `_config.yml` file to enable tagging. Do not forget to also add the following to your `Gemfile`:
+
 ```Gemfile
 gem "jekyll-tagging"
 ```
+
 **Gravatar** if you want to display your gravatar picture, add the `liquid-md5` to your `_config.yml` file. Do not forget to also add the following to your `Gemfile`:
+
 ```Gemfile
 gem "liquid-md5"
 ```
+
 ## FAQ
 
 > I have configured posts but no posts are showing?
@@ -145,3 +154,15 @@ To add a custom directory to your theme-gem, please edit the regexp in `jekyll-d
 ## License
 
 The theme is available as open source under the terms of the [Apache License 2.0](https://opensource.org/licenses/Apache-2.0).
+
+
+
+---
+
+## For those who discovered "without plugin" and the original one 
+
+"Without plugins" means no third-party plugins here. There is still one or two plugins maybe, but they are allowed to use. (In fact I don't know whether those plugins are used or not, but anyway :)
+
+It looks totally different in some places between the one "without plugins" and the original one. You can visit https://kunihiro.me for more information. (screenshot below)
+
+![changes](screenshot_new.png)

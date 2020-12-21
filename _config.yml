@@ -1,54 +1,46 @@
-title: dash
-author: GitHub User
-email: miguel-gonzalez@gmx.de
-description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-show_excerpts: false # set to true to show excerpts on the homepage
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+# --------------------------------------------------------------------------------
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+# --------------------------------------------------------------------------------
 
-paginate: 1
+title: Your Awesome Name # The name of the blog
+email: 
+description: >- # this means to ignore newlines until "url:". And the description will be shown below the title.
+  Hi, there. Welcome to jekyll. 
+url:  # the base hostname & protocol for your site, also required by disqus to display comments. 
+
+# jekyll-paginate
+paginate: 5
 paginate_path: "/blog/page:num/"
 
-tag_permalink_style: pretty
-tag_page_layout: tag_page
-tag_page_dir: tag
-
-# jekyll-dash date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+# Build settings
+theme: jekyll-dash 
+# These plugins are allowed by GitHub
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  
 dash:
   date_format: "%b %-d, %Y"
 
   disqus:
-    shortname: bitbrain-github-io
+    shortname: 
 
-  # generate social links in footer
+  # generate social links in footer, 
   # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
   social_links:
-    - url: https://twitter.com/bitbrain_
+    - url: 
       icon: twitter-square
       color: cyan
-    - url: https://bitbrain.itch.io
-      icon: itch-io
-      color: red
-    - url: https://github.com/bitbrain
+    - url:  
       icon: github-square
       color: purple
-
+      
   show_author: true
-
-  animation_speed: 50
-
-# Build settings
-theme: jekyll-dash
-
-plugins:
- - jekyll-feed
- - jekyll-seo-tag
- - jekyll-paginate
- - liquid-md5
- - jekyll/tagging
-
-# Replaces the default avatar provider (gravatar)
-#avatar_source: github
-#github_username: bitbrain
