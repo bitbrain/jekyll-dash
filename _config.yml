@@ -1,11 +1,9 @@
-title: dash
-author: GitHub User
-email: miguel-gonzalez@gmx.de
+title: bonzi.sh
+author: Alfie Foster
+email: me@bonzi.sh
 description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-show_excerpts: false # set to true to show excerpts on the homepage
+  bonzi.sh
+show_excerpts: true # set to true to show excerpts on the homepage
 
 paginate: 1
 paginate_path: "/blog/page:num/"
@@ -17,21 +15,18 @@ tag_page_dir: tag
 # jekyll-dash date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 dash:
-  date_format: "%b %-d, %Y"
+  date_format: "%d/%m/%Y %H:%M"
 
-  disqus:
-    shortname: bitbrain-github-io
+  #disqus:
+  #  shortname: bitbrain-github-io
 
   # generate social links in footer
   # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
   social_links:
-    - url: https://twitter.com/bitbrain_
+    - url: https://twitter.com/lordbonzi
       icon: twitter-square
       color: cyan
-    - url: https://bitbrain.itch.io
-      icon: itch-io
-      color: red
-    - url: https://github.com/bitbrain
+    - url: https://github.com/bonzi
       icon: github-square
       color: purple
 
@@ -50,5 +45,5 @@ plugins:
  - jekyll/tagging
 
 # Replaces the default avatar provider (gravatar)
-#avatar_source: github
-#github_username: bitbrain
+avatar_source: github
+github_username: bonzi
