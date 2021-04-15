@@ -1,10 +1,8 @@
-title: dash
-author: GitHub User
-email: miguel-gonzalez@gmx.de
+title: Be nice :)
+author: nicejeremy
+email: woogri83@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  I play to win, whether during practice or a real game. And I will not let anything get in the way of me and my competitive enthusiasm to win. - Michael Jordan
 show_excerpts: false # set to true to show excerpts on the homepage
 
 paginate: 1
@@ -28,10 +26,7 @@ dash:
     - url: https://twitter.com/bitbrain_
       icon: twitter-square
       color: cyan
-    - url: https://bitbrain.itch.io
-      icon: itch-io
-      color: red
-    - url: https://github.com/bitbrain
+    - url: https://github.com/nicejeremy
       icon: github-square
       color: purple
 
