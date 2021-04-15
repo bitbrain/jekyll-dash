@@ -3,8 +3,7 @@ layout: post
 title:  "Installation docker on CentOS 7"
 date:   2016-04-23
 categories: docker
-tags:
-- docker
+tags: docker
 ---
 
 * content

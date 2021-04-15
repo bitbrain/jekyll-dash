@@ -3,9 +3,7 @@ layout: post
 title:  "What is docker swarm?"
 date:   2016-04-26
 categories: docker
-tags:
-- docker
-- swarm
+tags: docker
 ---
 
 * content

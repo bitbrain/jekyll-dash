@@ -3,8 +3,7 @@ layout: post
 title:  "Docker Basic Commands"
 date:   2016-04-25
 categories: docker
-tags:
-- docker
+tags: docker
 ---
 
 * content

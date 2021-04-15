@@ -3,9 +3,7 @@ layout: post
 title:  "Java's Garbage Collection - Serial Garbage Collector"
 date:   2016-04-23
 categories: java
-tags:
-- java
-- gc
+tags: java gc
 ---
 
 * content
