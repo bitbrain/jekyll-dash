@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "show_exerpts:"
   I play to win, whether during practice or a real game. And I will not let anything get in the way of me and my competitive enthusiasm to win. - Michael Jordan
 show_excerpts: false # set to true to show excerpts on the homepage
 
-paginate: 1
+paginate: 10
 paginate_path: "/blog/page:num/"
 
 tag_permalink_style: pretty
