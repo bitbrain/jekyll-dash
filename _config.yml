@@ -23,9 +23,6 @@ dash:
   # generate social links in footer
   # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
   social_links:
-    - url: https://twitter.com/bitbrain_
-      icon: twitter-square
-      color: cyan
     - url: https://github.com/nicejeremy
       icon: github-square
       color: purple
@@ -36,6 +33,9 @@ dash:
 
 # Build settings
 theme: jekyll-dash
+
+include:
+  - post_images
 
 plugins:
  - jekyll-feed
