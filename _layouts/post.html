@@ -6,13 +6,9 @@ layout: default
 {% endunless %}
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-<!--  {% if page.tags %}-->
-<!--    {% for tag in page.tags %}-->
-<!--      <span class="tag">{{ tag }}</span>-->
-<!--    {% endfor %}-->
-<!--  {% endif %}-->
   <span>
   {% for tag in page.tags %}
+    {% assign pagetags = pagetags | append:tag %}
     {% capture tag_name %}{{ tag }}{% endcapture %}
     <a class="tag" href="/tag/{{ tag_name }}">{{ tag_name }}</a>
   {% endfor %}
@@ -33,12 +29,16 @@ layout: default
 </div>
 {% endif %}
 
-{% assign size = site.related_posts | size %}
+{% for tag in pagetags %}
+  {% assign temppost = site.tags[tag] | where_exp: "post", "post.tags contains tag" %}
+{% endfor %}
+{% assign relatedpost = temppost | where_exp: "post", "post.title != page.title" %}
+{% assign size = relatedpost | size %}
 {% if size != 0 %}
 <div class="related">
   <h2>related posts</h2>
   <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
+    {% for post in relatedpost limit: 3 %}
       <li>
         <h3>
           <a href="{{ post.url }}">
