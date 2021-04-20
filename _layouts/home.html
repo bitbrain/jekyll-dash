@@ -9,17 +9,21 @@ layout: default
 <h1>recent articles</h1>
     <div class="post-links">
       {% for post in paginator.posts %}
+
         <div class="post-link-wrapper">
           <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
           <div class="post-meta">
-
-            {% if site.plugins contains "jekyll/tagging" %}
             <div class="post-tags">
-                {% for tag in post.tags %}
-                <a class="tag" href="/tag/{{ tag }}/">{{ tag }}</a>
-                {% endfor %}
+<!--              {% for tag in post.tags %}-->
+<!--                <span class="tag">{{ tag }}</span>-->
+<!--              {% endfor %}-->
+              <span>
+              {% for tag in post.tags %}
+                {% capture tag_name %}{{ tag }}{% endcapture %}
+                <a class="tag" href="/tag/{{ tag_name }}">{{ tag_name }}</a>
+              {% endfor %}
+              </span>
             </div>
-            {% endif %}
             {% if site.date_format %}
               {{ post.date | date: site.date_format }}
             {% else %}

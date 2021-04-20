@@ -5,9 +5,6 @@ date:   2017-02-21
 categories: nodejs
 tags:
 - nodejs
-- expressjs
-- redis
-- session
 ---
 
 * content

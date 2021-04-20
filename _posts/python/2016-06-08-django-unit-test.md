@@ -5,7 +5,6 @@ date:   2016-06-08
 categories: python
 tags:
 - python
-- django
 ---
 
 * content

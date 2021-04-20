@@ -6,13 +6,17 @@ layout: default
 {% endunless %}
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  {% if site.plugins contains "jekyll/tagging" %}
-  <div class="post-tags">
-      {% for tag in page.tags %}
-      <a class="tag" href="/tag/{{ tag }}/">{{ tag }}</a>
-      {% endfor %}
-  </div>
-  {% endif %}
+<!--  {% if page.tags %}-->
+<!--    {% for tag in page.tags %}-->
+<!--      <span class="tag">{{ tag }}</span>-->
+<!--    {% endfor %}-->
+<!--  {% endif %}-->
+  <span>
+  {% for tag in page.tags %}
+    {% capture tag_name %}{{ tag }}{% endcapture %}
+    <a class="tag" href="/tag/{{ tag_name }}">{{ tag_name }}</a>
+  {% endfor %}
+  </span>
   <div class="post-date">Published on {{ page.date | date_to_string }}</div>
   {% if page.description != null %}
   <noscript>

@@ -5,9 +5,6 @@ date:   2016-06-13
 categories: openstack
 tags:
 - openstack
-- cinder
-- backup
-- swift
 ---
 
 * content

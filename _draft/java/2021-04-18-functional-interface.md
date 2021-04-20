@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "CompletableFuture"
-date:   2021-04-15
+title:  "[JAVA] @FunctionalInterface"
+date:   2021-04-18
 categories: java
 tags: java annotation functional
 ---
@@ -9,16 +9,17 @@ tags: java annotation functional
 * content
 {:toc}
 
-# [JAVA] @FunctionalInterface
-## 개요
+# 개요
 
-## Predicate
+# Predicate
 
-## Consumer
+# Consumer
 
-## Function
+# Function
 
-## Supplier
+# Supplier
 
-## Operator
+# Operator
+
+# References
 

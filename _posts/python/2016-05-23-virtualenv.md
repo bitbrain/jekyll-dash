@@ -5,7 +5,6 @@ date:   2016-05-10
 categories: python
 tags:
 - python
-- TODO
 ---
 
 * content

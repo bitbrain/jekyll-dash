@@ -5,7 +5,6 @@ date:   2016-07-08
 categories: openstack
 tags:
 - openstack
-- horizon
 ---
 
 * content

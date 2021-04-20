@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "CompletableFuture"
+title:  "[JAVA] CompletableFuture"
 date:   2021-04-15
 categories: java
 tags: java concurrency
@@ -9,17 +9,18 @@ tags: java concurrency
 * content
 {:toc}
 
-# [JAVA] CompletableFuture
-## 개요
+# 개요
 
-## get() 메서드 
+# get() 메서드 
 
-## join() 메서드
+# join() 메서드
 
-## thenApply, thenCompose 차이
+# thenApply, thenCompose 차이
 
-## xxxxAsync 메서드
+# xxxxAsync 메서드
 
-## Thread Pool 관리
+# Thread Pool 관리
+
+# References
 
 
