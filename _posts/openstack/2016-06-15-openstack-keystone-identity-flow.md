@@ -19,43 +19,19 @@ tags:
 
 
 ### Keystone의 주요 용어
-- Authentication<br/>
-사용자의 신원(Identity)를 확인하기 위한 프로세스
-
-- Credentials<br/>
-사용자의 신원(Identity)을 확인하기 위한 데이터 (ex. user name and password, user name and API key ...)
-
-- Domain (Identity service API v3)<br/>
-신원 객체(Identity Entities)들을 관리하기 위해 관리적인 측면에서 바운더리를 정의해 놓은 사용자(User)들과 프로젝트(Project)들의 집합 
-개인, 회사 운영자 자신의 공간을 나타낼 수도 있다. Domain 관리자는 해당 Domain 내에서 프로젝트(Project) 및 사용자(User), 그룹(Group)을 생성할 수 있고 사용자(User) 및 그룹(Group)에 역할(Role)을 부여할 수도 있다.  
-
-- Endpoint<br/>
-OpenStack 서비스에 연결할 수 있는 접속가능한 주소
-
-- Group (Identity service API v3)<br/>
-특정 Domain에 속해있는 사용자(User)들의 집합. 그룹에 대해 역할(Role)을 지정할 수 있다.
-
-- OpenStackClient<br/>
-Identity API를 포함한 OpenStack 서비스의 커맨드라인 인터페이스(CLI)
-
-- Project<br/>
-그룹(Group) 혹은 격리된 자원 또는 신원 객체(Identity Object)들의 컨테이너, 서비스 운영자에 의존적일 수 있으 고객 계정 조직 또는 테넌트(Tenant)에 맵핑될 수 있다.
-
-- Region (Identity service API v3)<br/>
-일반적으로 분할된 OpenStack 배포 환경을 나타낸다. AWS의 US East, US West, EU, Asia Pacific(Seoul) 등의 Region을 같은 의미
-
-- Role<br/>
-사용자(User)에게 개별적으로 부여되는 역할(Role). (ex. admin, member ...) 
-
-- Service<br/>
-사용자가 접근할 수 있고 사용할 수 있는 하나 또는 그 이상의 엔드포인트(Endpoint)를 제공하는 OpenStack 서비스
-
-- Token<br/>
-OpenStack API 및 자원에 접근 할 수 있게 하는 알파벳과 숫자가 조합된 문자열
-
-- User<br/>
-OpenStack 클라우드 서비스를 사용하는 사용자, 시스템 혹은 서비스
-
+- Authentication: 사용자의 신원(Identity)를 확인하기 위한 프로세스
+- Credentials: 사용자의 신원(Identity)을 확인하기 위한 데이터 (ex. user name and password, user name and API key ...)
+- Domain (Identity service API v3): 신원 객체(Identity Entities)들을 관리하기 위해 관리적인 측면에서 바운더리를 정의해 놓은 사용자(User)들과 프로젝트(Project)들의 집합 
+개인, 회사 운영자 자신의 공간을 나타낼 수도 있다. Domain 관리자는 해당 Domain 내에서 프로젝트(Project) 및 사용자(User), 그룹(Group)을 생성할 수 있고 사용자(User) 및 그룹(Group)에 역할(Role)을 부여할 수도 있다.
+- Endpoint: OpenStack 서비스에 연결할 수 있는 접속가능한 주소
+- Group (Identity service API v3): 특정 Domain에 속해있는 사용자(User)들의 집합. 그룹에 대해 역할(Role)을 지정할 수 있다.
+- OpenStackClient: Identity API를 포함한 OpenStack 서비스의 커맨드라인 인터페이스(CLI)
+- Project: 그룹(Group) 혹은 격리된 자원 또는 신원 객체(Identity Object)들의 컨테이너, 서비스 운영자에 의존적일 수 있으 고객 계정 조직 또는 테넌트(Tenant)에 맵핑될 수 있다.
+- Region (Identity service API v3): 일반적으로 분할된 OpenStack 배포 환경을 나타낸다. AWS의 US East, US West, EU, Asia Pacific(Seoul) 등의 Region을 같은 의미
+- Role: 사용자(User)에게 개별적으로 부여되는 역할(Role). (ex. admin, member ...)
+- Service: 사용자가 접근할 수 있고 사용할 수 있는 하나 또는 그 이상의 엔드포인트(Endpoint)를 제공하는 OpenStack 서비스
+- Token: OpenStack API 및 자원에 접근 할 수 있게 하는 알파벳과 숫자가 조합된 문자열
+- User: OpenStack 클라우드 서비스를 사용하는 사용자, 시스템 혹은 서비스
 
 ## Keystone의 인증 절차
 
