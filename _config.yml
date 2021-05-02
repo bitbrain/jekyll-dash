@@ -53,4 +53,4 @@ plugins:
 #avatar_source: github
 #github_username: bitbrain
 #avatar_source: local
-#avatar_path: assets/avatar.png
+#avatar_path: /assets/avatar.png
