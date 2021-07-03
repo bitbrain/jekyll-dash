@@ -18,3 +18,5 @@ task :clean do
   puts 'Cleaning up _site...'.bold
   Jekyll::Commands::Clean.process({})
 end
+
+task :default => :build
