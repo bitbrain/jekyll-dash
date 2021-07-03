@@ -2,9 +2,9 @@ name: Ruby
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - !main
+  pull_request
 
 jobs:
   test:
