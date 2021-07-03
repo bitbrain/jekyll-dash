@@ -52,3 +52,5 @@ plugins:
 # Replaces the default avatar provider (gravatar)
 #avatar_source: github
 #github_username: bitbrain
+#avatar_source: local
+#avatar_path: /assets/avatar.png
