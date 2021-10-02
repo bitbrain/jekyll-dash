@@ -22,12 +22,19 @@ jobs:
         bundler-cache: true
     - name: Run tests
       run: bundle exec rake
+
   # release the tag to rubygems
   release:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: ['3.0']
     steps:
       - uses: ruby/setup-ruby@473e4d8fe5dd94ee328fdfca9f8c9c7afc9dae5e
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true
       - uses: actions/checkout@v1
       - name: Release Gem
         uses: cadwallion/publish-rubygems-action@master
