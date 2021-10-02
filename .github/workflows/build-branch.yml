@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   test:
-    if: github.ref != 'refs/head/main'
+    if: github.ref != 'refs/heads/main'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -27,10 +27,11 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
+      - uses: ruby/setup-ruby@473e4d8fe5dd94ee328fdfca9f8c9c7afc9dae5e
       - uses: actions/checkout@v1
       - name: Release Gem
         uses: cadwallion/publish-rubygems-action@master
         env:
           GITHUB_TOKEN: ${{secrets.GH_CREDENTIALS}}
           RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_API_KEY}}
-          RELEASE_COMMAND: rake release
+          RELEASE_COMMAND: bundle exec rake release
