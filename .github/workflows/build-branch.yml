@@ -25,6 +25,7 @@ jobs:
   # release the tag to rubygems
   release:
     if: github.ref == 'refs/head/main'
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: Release Gem
