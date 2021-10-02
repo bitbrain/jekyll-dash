@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   test:
-
+    if: github.ref != 'refs/head/main'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -22,3 +22,15 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run tests
       run: bundle exec rake
+  # release the tag to rubygems
+  release:
+    if: github.ref == 'refs/head/main'
+    steps:
+    - uses: actions/checkout@v1
+    - name: Release Gem
+        if: contains(github.ref)
+        uses: cadwallion/publish-rubygems-action@master
+        env:
+          GITHUB_TOKEN: ${{secrets.GH_CREDENTIALS}}
+          RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_API_KEY}}
+          RELEASE_COMMAND: rake release

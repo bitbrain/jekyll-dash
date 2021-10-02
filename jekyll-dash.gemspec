@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-dash"
-  spec.version       = "1.3.4"
+  spec.version       = "1.3.5"
   spec.authors       = ["Miguel Gonzalez Sanchez"]
   spec.email         = ["miguel-gonzalez@gmx.de"]
 
