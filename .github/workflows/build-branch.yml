@@ -30,8 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Release gem
-        uses: cadwallion/publish-rubygems-action@master
-        env:
-          GITHUB_TOKEN: ${{secrets.GH_CREDENTIALS}}
-          RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_API_KEY}}
-          RELEASE_COMMAND: rake release
+        uses: dawidd6/action-publish-gem@v1
+        with:
+          github_token: ${{secrets.GH_CREDENTIALS}}
+          api_key: ${{secrets.RUBYGEMS_API_KEY}}
