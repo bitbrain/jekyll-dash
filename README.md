@@ -25,7 +25,7 @@ gem 'jekyll-dash', '~> 1.0.0'
 
 For **Jekyll 4**:
 ```ruby
-gem 'jekyll-dash', '~> 2.0.0'
+gem 'jekyll-dash', '~> 2.1.0'
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
@@ -86,12 +86,9 @@ dash:
 ```
 ## Using this theme directly on Github Pages
 
-Please keep in mind that Github Pages does only support [a limited list of Jekyll plugins](https://pages.github.com/versions/). You will be able to use this theme on Github Pages but some functionality might not be available, for example displaying tags. In order to use this theme to a full extend, you have to generate the `_site` externally, for example on [TravisCI](https://travis-ci.org). 
+Please keep in mind that Github Pages does only support [a limited list of Jekyll plugins](https://pages.github.com/versions/). You will be able to use this theme on Github Pages but some functionality might not be available, for example displaying tags. In order to use this theme to a full extend, you have to generate the `_site` [separately via Github Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/).
 
-For example, you want to host your own blog on `https://<username>.github.io`. As a result, you require the following repositories:
-
-* `blog` - contains the actual Jekyll sources ([see example](https://github.com/bitbrain/blog))
-* `<username>.github.io` - contains generated webpage, pushed automatically via TravisCI ([see example](https://github.com/bitbrain/bitbrain.github.io))
+* `<username>.github.io` - contains main source branch and orphan gh-pages branch ([see example](https://github.com/bitbrain/bitbrain.github.io))
 
 You are not required to do this, but keep in mind that some functionality might not be available when using the Jekyll generator on Github directly!
 
