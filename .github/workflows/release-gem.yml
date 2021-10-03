@@ -1,5 +1,4 @@
-name: Build Branch
-
+name: Release Gem
 on: [push]
 
 jobs:
