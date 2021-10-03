@@ -27,22 +27,11 @@ jobs:
   release:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        ruby-version: ['2.6']
     steps:
-      - uses: ruby/setup-ruby@473e4d8fe5dd94ee328fdfca9f8c9c7afc9dae5e
-        with:
-          ruby-version: ${{ matrix.ruby-version }}
-          bundler-cache: true
       - uses: actions/checkout@v1
-      - name: Install bundler
-        run: gem install bundler
-      - name: Install other dependencies
-        run: bundle install
       - name: Release gem
         uses: cadwallion/publish-rubygems-action@master
         env:
           GITHUB_TOKEN: ${{secrets.GH_CREDENTIALS}}
           RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_API_KEY}}
-          RELEASE_COMMAND: bundle exec rake release
+          RELEASE_COMMAND: rake release
