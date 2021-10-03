@@ -1,6 +1,5 @@
 # coding: utf-8
 require 'jekyll'
-require 'rake/release/task'
 
 # Extend string to allow for bold text.
 class String
@@ -18,10 +17,6 @@ end
 task :clean do
   puts 'Cleaning up _site...'.bold
   Jekyll::Commands::Clean.process({})
-end
-
-Rake::Release::Task.new do |spec|
-  spec.sign_tag = true
 end
 
 task :default => :build
