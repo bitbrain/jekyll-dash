@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   release:
-    if: github.ref == 'refs/heads/main'
+    if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/2.x' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
