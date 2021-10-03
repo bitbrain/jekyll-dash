@@ -4,6 +4,7 @@ layout: default
 {% unless site.dash.show_author == false %}
   {% include author.html %}
 {% endunless %}
+{{ content }}
 {% assign posts_count = paginator.posts | size %}
 {% if posts_count > 0 %}
 <h1>recent articles</h1>
@@ -20,8 +21,8 @@ layout: default
                 {% endfor %}
             </div>
             {% endif %}
-            {% if site.date_format %}
-              {{ post.date | date: site.date_format }}
+            {% if site.dash.date_format %}
+              {{ post.date | date: site.dash.date_format }}
             {% else %}
               {{ post.date | date: "%b %-d, %Y" }}
             {% endif %}

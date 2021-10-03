@@ -20,8 +20,8 @@ layout: default
               <a class="tag" href="/tag/{{ tag }}/">{{ tag }}</a>
               {% endfor %}
           </div>
-          {% if site.date_format %}
-            {{ post.date | date: site.date_format }}
+          {% if site.dash.date_format %}
+            {{ post.date | date: site.dash.date_format }}
           {% else %}
             {{ post.date | date: "%b %-d, %Y" }}
           {% endif %}

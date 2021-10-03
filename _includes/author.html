@@ -3,6 +3,10 @@
         {% capture avatar_image %}
             https://github.com/{{ site.github_username }}.png
         {% endcapture %}
+    {% elsif site.avatar_source == "local" and site.avatar_path %}
+        {% capture avatar_image %}
+            {{site.avatar_path}}
+        {% endcapture %}
     {% elsif site.plugins contains "liquid-md5" %}
         {% capture avatar_image %}
             https://gravatar.com/avatar/{{ site.email | downcase | md5 }}?s=256

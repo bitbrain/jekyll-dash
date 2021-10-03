@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-dash"
-  spec.version       = "2.0.0"
+  spec.version       = "2.1.0"
   spec.authors       = ["Miguel Gonzalez Sanchez"]
   spec.email         = ["miguel-gonzalez@gmx.de"]
 
@@ -17,6 +17,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.1"
   spec.add_runtime_dependency "jekyll-paginate"
 
-  spec.add_development_dependency "bundler", "~> 2.1.0"
-  spec.add_development_dependency "rake", "~> 13.0"
+  spec.add_development_dependency "bundler", "~> 2.2.28"
+  spec.add_development_dependency "rake", "~> 13.0.6"
 end
