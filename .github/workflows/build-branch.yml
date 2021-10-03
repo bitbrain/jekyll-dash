@@ -36,6 +36,8 @@ jobs:
           ruby-version: ${{ matrix.ruby-version }}
           bundler-cache: true
       - uses: actions/checkout@v1
+      - name: Install dependencies
+        run: bundle install
       - name: Release Gem
         uses: cadwallion/publish-rubygems-action@master
         env:
