@@ -3,6 +3,7 @@
 
 A dark and light theme for Jekyll, inspired by Dash UI for Atom. 🌒☀
 
+![Build Tag](https://github.com/bitbrain/jekyll-dash/actions/workflows/build-tag.yml/badge.svg)
 ![Build Status](https://github.com/bitbrain/jekyll-dash/actions/workflows/release-gem.yml/badge.svg)
 [![license](https://img.shields.io/github/license/bitbrain/jekyll-dash.svg?style=flat-square)](LICENSE.MD)
 [![Gem](https://img.shields.io/gem/v/jekyll-dash.svg?style=flat)](http://rubygems.org/gems/jekyll-dash "View this project in Rubygems")
