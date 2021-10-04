@@ -1,5 +1,4 @@
 name: Release Gem
-description: Releases a gem to rubygems.
 
 on:
   push:tags

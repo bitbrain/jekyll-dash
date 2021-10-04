@@ -1,5 +1,4 @@
 name: Build Tag
-description: Creates a new tag in case there is a new gemspec version specified.
 
 on:
   push:

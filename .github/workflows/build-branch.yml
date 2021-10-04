@@ -1,5 +1,4 @@
 name: Build branch
-description: Builds the current branch if applicable
 
 on:
   push:
