@@ -5,3 +5,4 @@ _site
 Gemfile.lock
 *.gem
 *.idea
+.jekyll-cache

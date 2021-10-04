@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-dash"
-  spec.version       = "1.3.6"
+  spec.version       = "2.1.0"
   spec.authors       = ["Miguel Gonzalez Sanchez"]
   spec.email         = ["miguel-gonzalez@gmx.de"]
 
@@ -12,8 +12,8 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_plugins|_sass|LICENSE|README)!i) }
 
-  spec.add_runtime_dependency "jekyll", "~> 3.5"
-  spec.add_runtime_dependency "jekyll-feed", "~> 0.9"
+  spec.add_runtime_dependency "jekyll", "~> 4.0"
+  spec.add_runtime_dependency "jekyll-feed", "~> 0.14"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.1"
   spec.add_runtime_dependency "jekyll-paginate"
 
