@@ -1,8 +1,8 @@
 name: Release Gem
 
 on:
-  push:tags
-    branches:
+  push:
+    tags:
       - v1.*
       - v2.*
 

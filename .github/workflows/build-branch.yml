@@ -3,11 +3,11 @@ name: Build branch
 on:
   push:
     branches-ignore:
-      - 1.x
+      - 1.*
       - main
     tags-ignore:
-      - v1.x
-      - v2.x
+      - v1.*
+      - v2.*
 
 jobs:
   build-branch:
