@@ -25,7 +25,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_CREDENTIALS }}
       - name: 🔖Build tag
-        if: ${{ steps.checkTag.outputs.exists == 'false' }}
+        if: ${{ steps.tag-check.outputs.exists == 'false' }}
         id: tag_version
         uses: mathieudutour/github-tag-action@v5.6
         with:
@@ -34,7 +34,7 @@ jobs:
           custom_tag:  ${{ steps.gemspec_fetch.outputs.version }}
           tag_prefix: v
       - name: 📙 Github release
-        if: ${{ steps.checkTag.outputs.exists == 'false' }}
+        if: ${{ steps.tag-check.outputs.exists == 'false' }}
         uses: ncipollo/release-action@v1
         with:
           tag: ${{ steps.tag_version.outputs.new_tag }}
