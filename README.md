@@ -90,6 +90,8 @@ Please keep in mind that Github Pages does only support [a limited list of Jekyl
 
 * `<username>.github.io` - contains main source branch and orphan gh-pages branch ([see example](https://github.com/bitbrain/bitbrain.github.io))
 
+I have created [a guide on how to set this up here](https://bitbra.in/2021/10/03/host-your-own-blog-for-free-with-custom-domain.html).
+
 You are not required to do this, but keep in mind that some functionality might not be available when using the Jekyll generator on Github directly!
 
 ## Additional Features
