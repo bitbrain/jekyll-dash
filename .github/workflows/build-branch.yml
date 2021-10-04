@@ -10,7 +10,7 @@ on:
       - v2.x
 
 jobs:
-  test:
+  build-branch:
     runs-on: ubuntu-latest
     strategy:
       matrix:

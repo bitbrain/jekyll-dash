@@ -7,7 +7,7 @@ on:
       - v2.*
 
 jobs:
-  release:
+  release-gem:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

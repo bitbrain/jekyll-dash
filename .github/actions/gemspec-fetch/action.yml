@@ -2,7 +2,7 @@ name: Fetches .gemspec metadata
 description: Reads the .gemspec file in the repo and exposes metadata from it
 
 inputs:
-  spec-file:
+  specfile:
     description: 'The path of the gem spec file'
     required: true
 
@@ -21,5 +21,3 @@ outputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  env:
-    SPEC_FILE: ${{ inputs.spec-file }}

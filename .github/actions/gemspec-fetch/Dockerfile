@@ -1,9 +1,9 @@
 FROM ruby:3
 
-RUN gem install parse_gemspec-cli
+RUN gem install parse_gemspec-cli \
+&& apt-get update \
+&& apt-get install -y jq
 
 COPY entrypoint.sh /entrypoint.sh
-
-ARG SPECFILE
-
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

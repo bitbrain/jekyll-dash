@@ -7,26 +7,29 @@ on:
       - 1.x
 
 jobs:
-  release:
+  build-tag:
     runs-on: ubuntu-latest
-    if: # TODO new gem version detected: is current ruby version available as git tag already?
     steps:
-      - uses: actions/checkout@v2
+      - name: 🎒 checkout repository
+        uses: actions/checkout@v2
       - name: 💎 Extract gemspec info
         id: gemspec_fetch
         uses: ./.github/actions/gemspec-fetch
-      - uses: mukunku/tag-exists-action@v1.0.0
+        with:
+          specfile: jekyll-dash.gemspec
+      - name: 🕵️‍♂️ investigate if tag exists
+        uses: mukunku/tag-exists-action@v1.0.0
         id: tag-check
         with: 
           tag: 'v${{ steps.gemspec_fetch.outputs.version }}'
         env:
-          GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_CREDENTIALS }}
       - name: 🔖Build tag
         if: ${{ !steps.checkTag.outputs.exists }}
         id: tag_version
         uses: mathieudutour/github-tag-action@v5.6
         with:
-          github_token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_CREDENTIALS }}
           default_bump: false
           custom_tag:  ${{ steps.gemspec_fetch.outputs.version }}
           tag_prefix: v

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SPEC_DATA=$(parse-gemspec-cli $SPECFILE)
+SPEC_DATA=$(parse-gemspec-cli $INPUT_SPECFILE)
 
 echo "::set-output name=name::$(echo $SPEC_DATA | jq -r '.name')"
 echo "::set-output name=description::$(echo $SPEC_DATA | jq -r '.description')"
