@@ -1,0 +1,40 @@
+name: Build Tag
+description: Creates a new tag in case there is a new gemspec version specified.
+
+on:
+  push:
+    branches:
+      - main
+      - 1.x
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: # TODO new gem version detected: is current ruby version available as git tag already?
+    steps:
+      - uses: actions/checkout@v2
+      - name: 💎 Extract gemspec info
+        id: gemspec_fetch
+        uses: ./.github/actions/gemspec-fetch
+      - uses: mukunku/tag-exists-action@v1.0.0
+        id: tag-check
+        with: 
+          tag: 'v${{ steps.gemspec_fetch.outputs.version }}'
+        env:
+          GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+      - name: 🔖Build tag
+        if: ${{ !steps.checkTag.outputs.exists }}
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v5.6
+        with:
+          github_token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+          default_bump: false
+          custom_tag:  ${{ steps.gemspec_fetch.outputs.version }}
+          tag_prefix: v
+      - name: 📙 Github release
+        if: ${{ !steps.checkTag.outputs.exists }}
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}

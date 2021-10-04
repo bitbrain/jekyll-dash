@@ -1,13 +1,18 @@
 name: Release Gem
-on: [push]
+description: Releases a gem to rubygems.
+
+on:
+  push:tags
+    branches:
+      - v1.*
+      - v2.*
 
 jobs:
   release:
-    if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/2.x' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Release gem
+      - uses: actions/checkout@v2
+      - name: 🚀 Release gem
         uses: dawidd6/action-publish-gem@v1
         with:
           github_token: ${{secrets.GH_CREDENTIALS}}

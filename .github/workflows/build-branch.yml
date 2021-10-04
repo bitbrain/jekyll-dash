@@ -1,10 +1,17 @@
-name: Build Branch
+name: Build branch
+description: Builds the current branch if applicable
 
-on: [push, pull_request]
+on:
+  push:
+    branches-ignore:
+      - 1.x
+      - main
+    tags-ignore:
+      - v1.x
+      - v2.x
 
 jobs:
   test:
-    if: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/2.x' }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -12,13 +19,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Ruby
-    # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
-    # change this to (see https://github.com/ruby/setup-ruby#versioning):
-    # uses: ruby/setup-ruby@v1
+    - name: 💎 Set up Ruby
       uses: ruby/setup-ruby@473e4d8fe5dd94ee328fdfca9f8c9c7afc9dae5e
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
-    - name: Run tests
+    - name: 🧪 Run tests 
       run: bundle exec rake

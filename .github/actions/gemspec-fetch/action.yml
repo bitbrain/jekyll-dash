@@ -1,0 +1,25 @@
+name: Fetches .gemspec metadata
+description: Reads the .gemspec file in the repo and exposes metadata from it
+
+inputs:
+  spec-file:
+    description: 'The path of the gem spec file'
+    required: true
+
+outputs:
+  name:
+    description: "The name of this Ruby gem"
+  version:
+    description: "The version of this Ruby gem"
+  description:
+    description: "The description of this Ruby gem"
+  homepage:
+    description: "The homepage of this Ruby gem"
+  summary:
+    description: "The summary of this Ruby gem"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  env:
+    SPEC_FILE: ${{ inputs.spec-file }}
