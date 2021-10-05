@@ -169,7 +169,7 @@
     }
 
     & > p {
-        display: block;
+        display: inline-block;
         padding-left: 3em;
     }
 
@@ -180,6 +180,10 @@
       float: left;
 
       font-size: 2em;
+    }
+
+    & > ul {
+      margin-left: 3em;
     }
 
     li {
