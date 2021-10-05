@@ -19,14 +19,14 @@ Add this line to your Jekyll site's `Gemfile`:
 
 For **Jekyll 3**:
 ```ruby
-gem 'jekyll-dash', '~> 1.0.0'
+gem 'jekyll-dash', '~> 1'
 ```
 
 > Keep in mind: Github pages generation only supports Jekyll 3.8 right now.
 
 For **Jekyll 4**:
 ```ruby
-gem 'jekyll-dash', '~> 2.1.0'
+gem 'jekyll-dash', '~> 2'
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
