@@ -63,7 +63,13 @@ dash:
   date_format: "%b %-d, %Y"
 
   disqus:
-    shortname: <your-disqus-shortname>
+    shortname: <your-disqus-shortname>  
+
+  # Replaces the default avatar provider (gravatar)
+  #avatar_source: github
+  #github_username: bitbrain
+  #avatar_source: local
+  #avatar_path: /assets/avatar.png
 
   # generate social links in footer
   # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
@@ -79,10 +85,6 @@ dash:
       color: purple
       
   show_author: true
-
-# Replaces the default avatar provider (gravatar)
-#avatar_source: github
-#github_username: bitbrain
 ```
 ## Using this theme directly on Github Pages
 

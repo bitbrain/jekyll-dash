@@ -39,6 +39,15 @@ dash:
 
   animation_speed: 50
 
+  # possible values are ltr (default) or rtl
+  page_direction: rtl
+
+  # Replaces the default avatar provider (gravatar)
+  #avatar_source: github
+  #github_username: bitbrain
+  #avatar_source: local
+  #avatar_path: /assets/avatar.png
+
 # Build settings
 theme: jekyll-dash
 
@@ -48,9 +57,3 @@ plugins:
  - jekyll-paginate
  - liquid-md5
  - jekyll/tagging
-
-# Replaces the default avatar provider (gravatar)
-#avatar_source: github
-#github_username: bitbrain
-#avatar_source: local
-#avatar_path: /assets/avatar.png
