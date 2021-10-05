@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html class="{% if site.dash.page_direction == 'rtl'%}direction--rtl{% else %}direction--ltr{% endif %}"lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {%- include head.html -%}
 

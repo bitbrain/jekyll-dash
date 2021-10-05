@@ -40,7 +40,7 @@ dash:
   animation_speed: 50
 
   # possible values are ltr (default) or rtl
-  page_direction: rtl
+  page_direction: ltr
 
   # Replaces the default avatar provider (gravatar)
   #avatar_source: github
