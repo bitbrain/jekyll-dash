@@ -4,14 +4,23 @@
 A dark and light theme for Jekyll, inspired by Dash UI for Atom. 🌒☀
 
 ![Build Tag](https://github.com/bitbrain/jekyll-dash/actions/workflows/build-tag.yml/badge.svg)
-![Build Status](https://github.com/bitbrain/jekyll-dash/actions/workflows/release-gem.yml/badge.svg)
 [![license](https://img.shields.io/github/license/bitbrain/jekyll-dash.svg?style=flat-square)](LICENSE.MD)
-[![Gem](https://img.shields.io/gem/v/jekyll-dash.svg?style=flat)](http://rubygems.org/gems/jekyll-dash "View this project in Rubygems")
+[![Gem](https://badgen.net/rubygems/v/jekyll-dash)](https://badgen.net/rubygems/v/jekyll-dash "View this project in Rubygems")
 [![Downloads](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-dash)](https://rubygems.org/gems/jekyll-dash "Number of Gem downloads")
 ---
 This theme for [Jekyll](https://jekyllrb.com/) has been inspired by [dash-ui](https://atom.io/themes/dash-ui), a dark theme for [Atom](https://atom.io).
 
 [![design](theme.gif)](http://bitbrain.github.io)
+
+## Features
+
+#### :first_quarter_moon: Dark/Light mode
+#### :arrow_left: Right-to-Left (RTL) support
+#### :bookmark: tag support
+#### :orange_book: pagination
+#### :computer: syntax highlighting
+#### :wave: customisable avatar box
+#### :two_hearts: social links
 
 ## Installation
 
