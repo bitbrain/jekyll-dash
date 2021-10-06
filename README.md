@@ -14,13 +14,13 @@ This theme for [Jekyll](https://jekyllrb.com/) has been inspired by [dash-ui](ht
 
 ## Features
 
-#### :first_quarter_moon: Dark/Light mode
-#### :arrow_left: Right-to-Left (RTL) support
-#### :bookmark: tag support
-#### :orange_book: pagination
-#### :computer: syntax highlighting
-#### :wave: customisable avatar box
-#### :two_hearts: social links
+#### :first_quarter_moon: Dark/Light Mode
+#### :arrow_left: Right-to-Left (RTL) Support
+#### :bookmark: Tags
+#### :orange_book: Pagination
+#### :computer: Syntax Highlighting
+#### :wave: Customisable Avatar Box
+#### :two_hearts: Social Links
 
 ## Installation
 
