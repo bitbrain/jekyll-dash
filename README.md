@@ -60,10 +60,24 @@ tag_page_layout: tag_page
 tag_page_dir: tag
 
 dash:
+  # the way how dates should be displayed
   date_format: "%b %-d, %Y"
 
+  # (optional) discqus comment configuration
   disqus:
-    shortname: <your-disqus-shortname>
+    shortname: <your-disqus-shortname>  
+
+  # the animation speed of the post scroll-in effect
+  animation_speed: 50
+
+  # wether to enable Right-to-Left support or not
+  rtl: false
+
+  # Replaces the default avatar provider (gravatar)
+  #avatar_source: github
+  #github_username: bitbrain
+  #avatar_source: local
+  #avatar_path: /assets/avatar.png
 
   # generate social links in footer
   # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
@@ -77,12 +91,9 @@ dash:
     - url: https://github.com/bitbrain
       icon: github-square
       color: purple
-      
+  
+  # wether the author box should be displayed or not
   show_author: true
-
-# Replaces the default avatar provider (gravatar)
-#avatar_source: github
-#github_username: bitbrain
 ```
 ## Using this theme directly on Github Pages
 

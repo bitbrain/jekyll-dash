@@ -17,8 +17,10 @@ tag_page_dir: tag
 # jekyll-dash date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 dash:
+  # the way how dates should be displayed
   date_format: "%b %-d, %Y"
 
+  # (optional) discqus comment configuration
   disqus:
     shortname: bitbrain-github-io
 
@@ -35,9 +37,20 @@ dash:
       icon: github-square
       color: purple
 
+  # wether the author box should be displayed
   show_author: true
 
+  # the animation speed of the scroll-in effect
   animation_speed: 50
+
+  # wether to enable Right-to-Left support or not
+  rtl: false
+
+  # Replaces the default avatar provider (gravatar)
+  #avatar_source: github
+  #github_username: bitbrain
+  #avatar_source: local
+  #avatar_path: /assets/avatar.png
 
 # Build settings
 theme: jekyll-dash
@@ -48,9 +61,3 @@ plugins:
  - jekyll-paginate
  - liquid-md5
  - jekyll/tagging
-
-# Replaces the default avatar provider (gravatar)
-#avatar_source: github
-#github_username: bitbrain
-#avatar_source: local
-#avatar_path: /assets/avatar.png
