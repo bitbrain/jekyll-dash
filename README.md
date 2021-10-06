@@ -70,8 +70,8 @@ dash:
   # the animation speed of the post scroll-in effect
   animation_speed: 50
 
-  # possible values are ltr (default) or rtl
-  page_direction: ltr
+  # wether to enable Right-to-Left support or not
+  rtl: false
 
   # Replaces the default avatar provider (gravatar)
   #avatar_source: github
