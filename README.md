@@ -162,6 +162,8 @@ Your theme is setup just like a normal Jekyll site! To test your theme, run `bun
 When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
 To add a custom directory to your theme-gem, please edit the regexp in `jekyll-dash.gemspec` accordingly.
 
+> If you want to learn how Jekyll Dash gets deployed via Github Actions, feel free [to read this article](https://bitbra.in/2021/10/05/workflow-of-releasing-gem-based-jekyll-theme.html) written by me.
+
 ## License
 
 The theme is available as open source under the terms of the [Apache License 2.0](https://opensource.org/licenses/Apache-2.0).
