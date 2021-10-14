@@ -149,6 +149,15 @@ gem "liquid-md5"
 
 Make sure you are using a version of this theme that is compatible with Jekyll. Version 1.x is only compatible with Jekyll 3.x while Version 2.x is only compatible with Jekyll 4.x.
 
+> I am getting an error 'cannot load such file --webrick' when trying to run `bundle exec jekyll serve`
+
+**Solution**
+
+As [explained here](https://github.com/jekyll/jekyll/issues/8523#issuecomment-751409319) this seems to be a bug with some recent Jekyll 4 version. To solve this simply run:
+```bash
+bundle add webrick
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/bitbrain/jekyll-dash. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
