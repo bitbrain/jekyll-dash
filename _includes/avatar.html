@@ -1,6 +1,6 @@
 {% if site.dash.avatar_source == "github" and site.dash.github_username %}
 {% capture avatar_image %}
-    https://github.com/{{ site.github_username }}.png
+    https://github.com/{{ site.dash.github_username }}.png
 {% endcapture %}
 {% elsif site.dash.avatar_source == "local" and site.dash.avatar_path %}
 {% capture avatar_image %}
