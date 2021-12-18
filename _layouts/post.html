@@ -9,7 +9,7 @@ layout: default
   {% if site.plugins contains "jekyll/tagging" %}
   <div class="post-tags">
       {% for tag in page.tags %}
-      <a class="tag" href="/tag/{{ tag }}/">{{ tag }}</a>
+      <a class="tag" href="{{ tag | tag_url }}">{{ tag }}</a>
       {% endfor %}
   </div>
   {% endif %}
