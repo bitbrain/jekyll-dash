@@ -122,6 +122,7 @@ If you are using a custom domain add in your main branch a file named CNAME with
 ```
 include: [CNAME]
 ```
+For more information about how to configure your CNAME file, read the [official documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
 ## Additional Features
 
