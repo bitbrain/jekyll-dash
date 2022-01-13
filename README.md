@@ -69,6 +69,9 @@ tag_permalink_style: pretty
 tag_page_layout: tag_page
 tag_page_dir: tag
 
+# for github pages custom domains:
+# include: [CNAME]
+
 dash:
   # the way how dates should be displayed
   date_format: "%b %-d, %Y"
@@ -114,6 +117,12 @@ Please keep in mind that Github Pages does only support [a limited list of Jekyl
 I have created [a guide on how to set this up here](https://bitbra.in/2021/10/03/host-your-own-blog-for-free-with-custom-domain.html).
 
 You are not required to do this, but keep in mind that some functionality might not be available when using the Jekyll generator on Github directly!
+
+If you are using a custom domain add in your main branch a file named CNAME with your domain there and uncomment this line in your config file:
+```
+include: [CNAME]
+```
+For more information about how to configure your CNAME file, read the [official documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
 ## Additional Features
 
