@@ -31,7 +31,7 @@ For **Jekyll 3**:
 gem 'jekyll-dash', '~> 1'
 ```
 
-> Keep in mind: Github pages generation only supports Jekyll 3.8 right now.
+> Keep in mind: Github pages generation only supports Jekyll 3.9.x right now.
 
 For **Jekyll 4**:
 ```ruby
