@@ -31,7 +31,7 @@ For **Jekyll 3**:
 gem 'jekyll-dash', '~> 1'
 ```
 
-> Keep in mind: Github pages generation only supports Jekyll 3.9.x right now.
+> Keep in mind: Github pages generation [only supports Jekyll 3.9.x right now](https://pages.github.com/versions/).
 
 For **Jekyll 4**:
 ```ruby
@@ -150,7 +150,7 @@ gem "liquid-md5"
 
 > I am using this theme but I don't see any tags?
 
-**Solution**: as described above you have to add the tagging plugin. Additionally, tags do not work natively by Github Pages. You have to build your site on an external CI and push the `_site` artifacts to a hosting repository.
+**Solution**: as described above you have to add the tagging plugin. Additionally, tags do not work natively by Github Pages. [You have to build your site on an external CI](https://bitbra.in/2021/10/03/host-your-own-blog-for-free-with-custom-domain.html) and push the `_site` artifacts to a hosting repository.
 
 > I am getting an error that Bundler could not find compatible versions for gem
 
