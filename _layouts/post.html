@@ -13,7 +13,12 @@ layout: default
       {% endfor %}
   </div>
   {% endif %}
-  <div class="post-date">Published on {{ page.date | date_to_string }}</div>
+  <div class="post-date">
+    Published on {{ page.date | date_to_string }}
+    {% if page.author != null %}
+    by {{ page.author }}
+    {% endif %}
+  </div>
   {% if page.description != null %}
   <noscript>
     <div class="post-description">{{ page.description }}</div>
