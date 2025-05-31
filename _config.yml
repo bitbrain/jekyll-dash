@@ -1,6 +1,6 @@
 title: "RTEMS GSoC 2025 Blogs"
 author: "Prithvi Tambewagh"
-url: "https://rkt-1597.github.io/GSoC-2025-RTEMS-Blogs-PrithviT"
+url: https://rkt-1597.github.io/GSoC-2025-RTEMS-Blogs-PrithviT
 email: 
 description: > # this means to ignore newlines until "show_exerpts:"
   "Series of bogs during GSoC 2025 @RTEMS for the project - Providing SPARC GRETH Network Drivers for lwIP"
