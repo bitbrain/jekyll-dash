@@ -22,8 +22,8 @@ jobs:
         id: tag-check
         with: 
           tag: 'v${{ steps.gemspec_fetch.outputs.version }}'
-        # env:
-          # GITHUB_TOKEN: ${{ secrets.GH_CREDENTIALS }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_CREDENTIALS }}
       - name: 🔖Build tag
         if: ${{ steps.tag-check.outputs.exists == 'false' }}
         id: tag_version
