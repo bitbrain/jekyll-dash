@@ -29,7 +29,7 @@ jobs:
         id: tag_version
         uses: mathieudutour/github-tag-action@v5.6
         with:
-          github_token: ${{ secrets.SECRET_TOKKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           default_bump: false
           custom_tag:  ${{ steps.gemspec_fetch.outputs.version }}
           tag_prefix: v
